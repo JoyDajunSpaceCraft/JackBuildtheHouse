@@ -1,0 +1,1227 @@
+*** Starting uWSGI 2.0.15 (64bit) on [Thu Dec  7 17:01:42 2017] ***
+compiled with version: 5.4.0 20160609 on 27 November 2017 15:38:22
+os: Linux-4.4.0-98-generic #121-Ubuntu SMP Tue Oct 10 14:24:03 UTC 2017
+nodename: ubuntu
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/python/Desktop/bj14/ihome_bj14/ihome
+writing pidfile to uwsgi.pid
+detected binary path: /home/python/.virtualenvs/flask_py2/bin/uwsgi
+chdir() to /home/python/Desktop/bj14/ihome_bj14/ihome
+your processes number limit is 31709
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:5000 fd 3
+Python version: 2.7.12 (default, Nov 20 2017, 18:23:56)  [GCC 5.4.0 20160609]
+Python main interpreter initialized at 0x1d97ad0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 415360 bytes (405 KB) for 8 cores
+*** Operational MODE: preforking+threaded ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x1d97ad0 pid: 41061 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 41061)
+spawned uWSGI worker 1 (pid: 41067, cores: 2)
+spawned uWSGI worker 2 (pid: 41068, cores: 2)
+spawned uWSGI worker 3 (pid: 41069, cores: 2)
+spawned uWSGI worker 4 (pid: 41070, cores: 2)
+*** Stats server enabled on 127.0.0.1:9001 fd: 16 ***
+[pid: 41067|app: 0|req: 1/1] 127.0.0.1 () {46 vars in 797 bytes} [Thu Dec  7 17:06:28 2017] GET /api/v1/house/index => generated 1176 bytes in 482 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 0)
+[pid: 41067|app: 0|req: 2/2] 127.0.0.1 () {46 vars in 797 bytes} [Thu Dec  7 17:07:21 2017] GET /api/v1/house/index => generated 1176 bytes in 59 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 1)
+[pid: 41067|app: 0|req: 3/3] 192.168.70.46 () {40 vars in 648 bytes} [Thu Dec  7 17:11:12 2017] GET /api/v1/house/index => generated 1168 bytes in 66 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 0)
+[pid: 41067|app: 0|req: 4/4] 192.168.70.46 () {42 vars in 743 bytes} [Thu Dec  7 17:11:25 2017] GET /api/v1/house/2 => generated 2242 bytes in 19 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 1)
+[pid: 41067|app: 0|req: 5/5] 192.168.70.37 () {40 vars in 652 bytes} [Thu Dec  7 17:12:07 2017] GET /api/v1/house/index => generated 1168 bytes in 28 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 0)
+[pid: 41067|app: 0|req: 6/6] 192.168.70.23 () {40 vars in 649 bytes} [Thu Dec  7 17:12:09 2017] GET /api/v1/house/index => generated 1168 bytes in 63 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 1)
+[pid: 41067|app: 0|req: 8/7] 192.168.70.46 () {40 vars in 742 bytes} [Thu Dec  7 17:12:16 2017] GET /api/v1/user/yzm?1 => generated 3196 bytes in 71 msecs (HTTP/1.1 200) 3 headers in 210 bytes (1 switches on core 0)
+[pid: 41067|app: 0|req: 8/8] 192.168.70.46 () {40 vars in 744 bytes} [Thu Dec  7 17:12:16 2017] GET /api/v1/user/yzm?11 => generated 3053 bytes in 37 msecs (HTTP/1.1 200) 3 headers in 210 bytes (1 switches on core 1)
+[pid: 41070|app: 0|req: 1/9] 192.168.70.46 () {40 vars in 746 bytes} [Thu Dec  7 17:12:18 2017] GET /api/v1/user/yzm?111 => generated 3266 bytes in 74 msecs (HTTP/1.1 200) 3 headers in 210 bytes (1 switches on core 0)
+[pid: 41070|app: 0|req: 2/10] 192.168.70.46 () {40 vars in 748 bytes} [Thu Dec  7 17:12:19 2017] GET /api/v1/user/yzm?1111 => generated 3045 bytes in 20 msecs (HTTP/1.1 200) 3 headers in 210 bytes (1 switches on core 1)
+[pid: 41067|app: 0|req: 9/11] 192.168.70.23 () {42 vars in 736 bytes} [Thu Dec  7 17:12:23 2017] GET /api/v1/house/index => generated 1168 bytes in 12 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 0)
+[pid: 41067|app: 0|req: 10/12] 192.168.70.53 () {40 vars in 645 bytes} [Thu Dec  7 17:12:25 2017] GET /api/v1/house/index => generated 1168 bytes in 13 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 1)
+[pid: 41067|app: 0|req: 11/13] 192.168.70.51 () {40 vars in 651 bytes} [Thu Dec  7 17:12:25 2017] GET /api/v1/house/index => generated 1168 bytes in 22 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 0)
+[pid: 41067|app: 0|req: 12/14] 192.168.70.23 () {42 vars in 736 bytes} [Thu Dec  7 17:12:26 2017] GET /api/v1/house/index => generated 1168 bytes in 14 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 1)
+[pid: 41067|app: 0|req: 13/15] 192.168.70.23 () {42 vars in 736 bytes} [Thu Dec  7 17:12:28 2017] GET /api/v1/house/index => generated 1168 bytes in 71 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 0)
+/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/sqlalchemy/engine/default.py:470: Warning: Incorrect datetime value: '' for column 'begin_date' at row 1
+  cursor.execute(statement, parameters)
+/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/sqlalchemy/engine/default.py:470: Warning: Incorrect datetime value: '' for column 'end_date' at row 1
+  cursor.execute(statement, parameters)
+/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/sqlalchemy/sql/default_comparator.py:161: SAWarning: The IN-predicate on "ihome_house.id" was invoked with an empty sequence. This results in a contradiction, which nonetheless can be expensive to evaluate.  Consider alternative strategies for improved performance.
+  'strategies for improved performance.' % expr)
+[pid: 41067|app: 0|req: 14/16] 192.168.70.53 () {42 vars in 848 bytes} [Thu Dec  7 17:12:30 2017] GET /api/v1/house/search?aid=2&sd=&ed=&sk=new&area=1 => generated 590 bytes in 29 msecs (HTTP/1.1 200) 3 headers in 215 bytes (2 switches on core 1)
+[pid: 41067|app: 0|req: 15/17] 192.168.70.23 () {42 vars in 736 bytes} [Thu Dec  7 17:12:41 2017] GET /api/v1/house/index => generated 1168 bytes in 15 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 0)
+[pid: 41067|app: 0|req: 16/18] 192.168.70.27 () {40 vars in 638 bytes} [Thu Dec  7 17:12:45 2017] GET /api/v1/house/index => generated 1168 bytes in 28 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 1)
+[pid: 41067|app: 0|req: 17/19] 192.168.70.51 () {40 vars in 745 bytes} [Thu Dec  7 17:12:45 2017] GET /api/v1/user/yzm?1 => generated 3319 bytes in 25 msecs (HTTP/1.1 200) 3 headers in 210 bytes (1 switches on core 0)
+[pid: 41067|app: 0|req: 18/20] 192.168.70.51 () {40 vars in 747 bytes} [Thu Dec  7 17:12:45 2017] GET /api/v1/user/yzm?11 => generated 2845 bytes in 14 msecs (HTTP/1.1 200) 3 headers in 210 bytes (1 switches on core 1)
+[pid: 41067|app: 0|req: 19/21] 192.168.70.38 () {40 vars in 651 bytes} [Thu Dec  7 17:12:45 2017] GET /api/v1/house/index => generated 1168 bytes in 13 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 0)
+[pid: 41067|app: 0|req: 20/22] 192.168.70.51 () {40 vars in 749 bytes} [Thu Dec  7 17:12:48 2017] GET /api/v1/user/yzm?111 => generated 3238 bytes in 13 msecs (HTTP/1.1 200) 3 headers in 210 bytes (1 switches on core 1)
+[pid: 41067|app: 0|req: 21/23] 192.168.70.51 () {40 vars in 751 bytes} [Thu Dec  7 17:12:48 2017] GET /api/v1/user/yzm?1111 => generated 3256 bytes in 19 msecs (HTTP/1.1 200) 3 headers in 210 bytes (1 switches on core 0)
+[pid: 41067|app: 0|req: 22/24] 192.168.70.51 () {40 vars in 753 bytes} [Thu Dec  7 17:12:48 2017] GET /api/v1/user/yzm?11111 => generated 3253 bytes in 22 msecs (HTTP/1.1 200) 3 headers in 210 bytes (1 switches on core 1)
+[pid: 41067|app: 0|req: 23/25] 192.168.70.51 () {40 vars in 755 bytes} [Thu Dec  7 17:12:48 2017] GET /api/v1/user/yzm?111111 => generated 3399 bytes in 33 msecs (HTTP/1.1 200) 3 headers in 210 bytes (1 switches on core 0)
+[pid: 41067|app: 0|req: 24/26] 192.168.70.51 () {40 vars in 757 bytes} [Thu Dec  7 17:12:48 2017] GET /api/v1/user/yzm?1111111 => generated 2942 bytes in 21 msecs (HTTP/1.1 200) 3 headers in 210 bytes (1 switches on core 1)
+[pid: 41067|app: 0|req: 25/27] 192.168.70.51 () {40 vars in 759 bytes} [Thu Dec  7 17:12:49 2017] GET /api/v1/user/yzm?11111111 => generated 3356 bytes in 15 msecs (HTTP/1.1 200) 3 headers in 210 bytes (1 switches on core 0)
+[pid: 41067|app: 0|req: 26/28] 192.168.70.51 () {40 vars in 761 bytes} [Thu Dec  7 17:12:49 2017] GET /api/v1/user/yzm?111111111 => generated 3138 bytes in 16 msecs (HTTP/1.1 200) 3 headers in 210 bytes (1 switches on core 1)
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./api_v1/house_views.py", line 142, in search
+    area_id=int(dict.get('aid'))
+ValueError: invalid literal for int() with base 10: ''
+[pid: 41067|app: 0|req: 27/29] 192.168.70.38 () {42 vars in 824 bytes} [Thu Dec  7 17:12:49 2017] GET /api/v1/house/search?aid=&sd=&ed=&sk=new&area=1 => generated 0 bytes in 3 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+[pid: 41070|app: 0|req: 3/30] 192.168.70.51 () {40 vars in 763 bytes} [Thu Dec  7 17:12:49 2017] GET /api/v1/user/yzm?1111111111 => generated 3594 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 210 bytes (1 switches on core 0)
+[pid: 41067|app: 0|req: 28/31] 192.168.70.51 () {40 vars in 765 bytes} [Thu Dec  7 17:12:49 2017] GET /api/v1/user/yzm?11111111111 => generated 2947 bytes in 22 msecs (HTTP/1.1 200) 3 headers in 210 bytes (1 switches on core 1)
+[pid: 41070|app: 0|req: 4/32] 192.168.70.51 () {40 vars in 767 bytes} [Thu Dec  7 17:12:50 2017] GET /api/v1/user/yzm?111111111111 => generated 3509 bytes in 17 msecs (HTTP/1.1 200) 3 headers in 210 bytes (1 switches on core 1)
+[pid: 41067|app: 0|req: 29/33] 192.168.70.51 () {40 vars in 769 bytes} [Thu Dec  7 17:12:50 2017] GET /api/v1/user/yzm?1111111111111 => generated 2662 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 210 bytes (1 switches on core 0)
+[pid: 41067|app: 0|req: 30/34] 192.168.70.51 () {40 vars in 771 bytes} [Thu Dec  7 17:12:50 2017] GET /api/v1/user/yzm?11111111111111 => generated 3111 bytes in 15 msecs (HTTP/1.1 200) 3 headers in 210 bytes (1 switches on core 1)
+[pid: 41067|app: 0|req: 31/35] 192.168.70.51 () {40 vars in 773 bytes} [Thu Dec  7 17:12:50 2017] GET /api/v1/user/yzm?111111111111111 => generated 3439 bytes in 14 msecs (HTTP/1.1 200) 3 headers in 210 bytes (1 switches on core 0)
+[pid: 41067|app: 0|req: 32/36] 192.168.70.46 () {48 vars in 1004 bytes} [Thu Dec  7 17:12:50 2017] POST /api/v1/user/session?token=b96c015560280ae11f28b00318b0efb6 => generated 67 bytes in 6 msecs (HTTP/1.1 200) 3 headers in 214 bytes (2 switches on core 1)
+[pid: 41070|app: 0|req: 5/37] 192.168.70.51 () {40 vars in 775 bytes} [Thu Dec  7 17:12:50 2017] GET /api/v1/user/yzm?1111111111111111 => generated 3550 bytes in 25 msecs (HTTP/1.1 200) 3 headers in 210 bytes (1 switches on core 0)
+[pid: 41070|app: 0|req: 6/38] 192.168.70.51 () {40 vars in 777 bytes} [Thu Dec  7 17:12:51 2017] GET /api/v1/user/yzm?11111111111111111 => generated 3143 bytes in 24 msecs (HTTP/1.1 200) 3 headers in 210 bytes (1 switches on core 1)
+[pid: 41067|app: 0|req: 33/39] 192.168.70.51 () {40 vars in 779 bytes} [Thu Dec  7 17:12:51 2017] GET /api/v1/user/yzm?111111111111111111 => generated 3463 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 210 bytes (1 switches on core 0)
+[pid: 41067|app: 0|req: 34/40] 192.168.70.51 () {40 vars in 781 bytes} [Thu Dec  7 17:12:51 2017] GET /api/v1/user/yzm?1111111111111111111 => generated 3398 bytes in 13 msecs (HTTP/1.1 200) 3 headers in 210 bytes (1 switches on core 1)
+[pid: 41067|app: 0|req: 35/41] 192.168.70.51 () {40 vars in 783 bytes} [Thu Dec  7 17:12:51 2017] GET /api/v1/user/yzm?11111111111111111111 => generated 3532 bytes in 7 msecs (HTTP/1.1 200) 3 headers in 210 bytes (1 switches on core 0)
+[pid: 41067|app: 0|req: 36/42] 192.168.70.51 () {40 vars in 785 bytes} [Thu Dec  7 17:12:51 2017] GET /api/v1/user/yzm?111111111111111111111 => generated 3616 bytes in 26 msecs (HTTP/1.1 200) 3 headers in 210 bytes (1 switches on core 1)
+[pid: 41067|app: 0|req: 37/43] 192.168.70.51 () {40 vars in 787 bytes} [Thu Dec  7 17:12:52 2017] GET /api/v1/user/yzm?1111111111111111111111 => generated 3449 bytes in 58 msecs (HTTP/1.1 200) 3 headers in 210 bytes (1 switches on core 0)
+[pid: 41067|app: 0|req: 38/44] 192.168.70.51 () {40 vars in 789 bytes} [Thu Dec  7 17:12:52 2017] GET /api/v1/user/yzm?11111111111111111111111 => generated 3361 bytes in 33 msecs (HTTP/1.1 200) 3 headers in 210 bytes (1 switches on core 1)
+[pid: 41067|app: 0|req: 39/45] 192.168.70.38 () {42 vars in 738 bytes} [Thu Dec  7 17:12:52 2017] GET /api/v1/house/index => generated 1168 bytes in 56 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 0)
+[pid: 41067|app: 0|req: 40/46] 192.168.70.51 () {42 vars in 738 bytes} [Thu Dec  7 17:12:55 2017] GET /api/v1/house/index => generated 1168 bytes in 23 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 1)
+[pid: 41067|app: 0|req: 41/47] 192.168.70.46 () {48 vars in 1004 bytes} [Thu Dec  7 17:12:55 2017] POST /api/v1/user/session?token=b96c015560280ae11f28b00318b0efb6 => generated 24 bytes in 64 msecs (HTTP/1.1 200) 3 headers in 214 bytes (2 switches on core 0)
+[pid: 41067|app: 0|req: 42/48] 192.168.70.46 () {42 vars in 730 bytes} [Thu Dec  7 17:12:55 2017] GET /api/v1/user/ => generated 133 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 215 bytes (2 switches on core 1)
+[pid: 41067|app: 0|req: 43/49] 192.168.70.51 () {42 vars in 738 bytes} [Thu Dec  7 17:12:56 2017] GET /api/v1/house/index => generated 1168 bytes in 18 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 0)
+[pid: 41067|app: 0|req: 44/50] 192.168.70.49 () {40 vars in 647 bytes} [Thu Dec  7 17:12:57 2017] GET /api/v1/house/index => generated 1168 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 1)
+[pid: 41067|app: 0|req: 45/51] 192.168.70.47 () {40 vars in 650 bytes} [Thu Dec  7 17:13:00 2017] GET /api/v1/house/index => generated 1168 bytes in 12 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 0)
+[pid: 41067|app: 0|req: 46/52] 192.168.70.46 () {42 vars in 736 bytes} [Thu Dec  7 17:13:01 2017] GET /api/v1/order/ => generated 13 bytes in 5 msecs (HTTP/1.1 200) 3 headers in 214 bytes (2 switches on core 1)
+[pid: 41070|app: 0|req: 7/53] 192.168.70.21 () {40 vars in 647 bytes} [Thu Dec  7 17:13:03 2017] GET /api/v1/house/index => generated 1168 bytes in 128 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 0)
+[pid: 41070|app: 0|req: 8/54] 192.168.70.54 () {40 vars in 646 bytes} [Thu Dec  7 17:13:05 2017] GET /api/v1/house/index => generated 1168 bytes in 13 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 1)
+[pid: 41067|app: 0|req: 47/55] 192.168.70.46 () {42 vars in 730 bytes} [Thu Dec  7 17:13:05 2017] GET /api/v1/user/ => generated 133 bytes in 5 msecs (HTTP/1.1 200) 3 headers in 215 bytes (2 switches on core 0)
+[pid: 41067|app: 0|req: 48/56] 192.168.70.27 () {42 vars in 725 bytes} [Thu Dec  7 17:13:05 2017] GET /api/v1/house/index => generated 1168 bytes in 11 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 1)
+[pid: 41067|app: 0|req: 49/57] 192.168.70.42 () {40 vars in 654 bytes} [Thu Dec  7 17:13:06 2017] GET /api/v1/house/index => generated 1168 bytes in 61 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 0)
+[pid: 41067|app: 0|req: 50/58] 192.168.70.46 () {42 vars in 740 bytes} [Thu Dec  7 17:13:06 2017] GET /api/v1/user/auth => generated 70 bytes in 13 msecs (HTTP/1.1 200) 3 headers in 214 bytes (2 switches on core 1)
+[pid: 41067|app: 0|req: 51/59] 192.168.70.40 () {40 vars in 647 bytes} [Thu Dec  7 17:13:07 2017] GET /api/v1/house/index => generated 1168 bytes in 12 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 0)
+[pid: 41067|app: 0|req: 52/60] 192.168.70.50 () {40 vars in 667 bytes} [Thu Dec  7 17:13:07 2017] GET /api/v1/house/index => generated 1168 bytes in 25 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 1)
+[pid: 41067|app: 0|req: 53/61] 192.168.70.46 () {42 vars in 730 bytes} [Thu Dec  7 17:13:10 2017] GET /api/v1/user/ => generated 133 bytes in 5 msecs (HTTP/1.1 200) 3 headers in 215 bytes (2 switches on core 0)
+[pid: 41070|app: 0|req: 9/62] 192.168.70.22 () {40 vars in 598 bytes} [Thu Dec  7 17:13:11 2017] GET /api/v1/house/index => generated 1168 bytes in 30 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 0)
+[pid: 41067|app: 0|req: 54/63] 192.168.70.23 () {48 vars in 1029 bytes} [Thu Dec  7 17:13:11 2017] POST /api/v1/user/session?token=b96c015560280ae11f28b00318b0efb6 => generated 24 bytes in 173 msecs (HTTP/1.1 200) 3 headers in 214 bytes (2 switches on core 1)
+[pid: 41070|app: 0|req: 10/64] 192.168.70.46 () {42 vars in 737 bytes} [Thu Dec  7 17:13:11 2017] GET /api/v1/house/ => generated 308 bytes in 16 msecs (HTTP/1.1 200) 3 headers in 215 bytes (2 switches on core 1)
+[pid: 41067|app: 0|req: 55/65] 192.168.70.23 () {42 vars in 761 bytes} [Thu Dec  7 17:13:11 2017] GET /api/v1/user/ => generated 133 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 215 bytes (2 switches on core 0)
+[pid: 41067|app: 0|req: 56/66] 192.168.70.55 () {40 vars in 647 bytes} [Thu Dec  7 17:13:12 2017] GET /api/v1/house/index => generated 1168 bytes in 10 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 1)
+[pid: 41067|app: 0|req: 57/67] 192.168.70.52 () {40 vars in 647 bytes} [Thu Dec  7 17:13:12 2017] GET /api/v1/house/index => generated 1168 bytes in 11 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 0)
+[pid: 41067|app: 0|req: 58/68] 192.168.70.46 () {42 vars in 764 bytes} [Thu Dec  7 17:13:13 2017] GET /api/v1/house/area_facility => generated 1942 bytes in 7 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 1)
+/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/sqlalchemy/sql/default_comparator.py:161: SAWarning: The IN-predicate on "ihome_house.id" was invoked with an empty sequence. This results in a contradiction, which nonetheless can be expensive to evaluate.  Consider alternative strategies for improved performance.
+  'strategies for improved performance.' % expr)
+[pid: 41070|app: 0|req: 11/69] 192.168.70.51 () {42 vars in 914 bytes} [Thu Dec  7 17:13:14 2017] GET /api/v1/house/search?aid=5&sd=2017-12-08&ed=2017-12-10&sk=new&area=1 => generated 1144 bytes in 33 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 0)
+/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/sqlalchemy/engine/default.py:470: Warning: Incorrect datetime value: '' for column 'begin_date' at row 1
+  cursor.execute(statement, parameters)
+/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/sqlalchemy/engine/default.py:470: Warning: Incorrect datetime value: '' for column 'end_date' at row 1
+  cursor.execute(statement, parameters)
+[pid: 41070|app: 0|req: 12/70] 192.168.70.49 () {42 vars in 850 bytes} [Thu Dec  7 17:13:16 2017] GET /api/v1/house/search?aid=5&sd=&ed=&sk=new&area=1 => generated 1144 bytes in 33 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 1)
+[pid: 41067|app: 0|req: 59/71] 192.168.70.23 () {42 vars in 772 bytes} [Thu Dec  7 17:13:19 2017] GET /api/v1/order/fd => generated 258 bytes in 11 msecs (HTTP/1.1 200) 3 headers in 215 bytes (2 switches on core 0)
+[pid: 41067|app: 0|req: 60/72] 192.168.70.23 () {42 vars in 761 bytes} [Thu Dec  7 17:13:21 2017] GET /api/v1/user/ => generated 133 bytes in 15 msecs (HTTP/1.1 200) 3 headers in 215 bytes (2 switches on core 1)
+[pid: 41067|app: 0|req: 61/73] 192.168.70.51 () {42 vars in 914 bytes} [Thu Dec  7 17:13:22 2017] GET /api/v1/house/search?aid=5&sd=2017-12-08&ed=2017-12-10&sk=new&area=1 => generated 1144 bytes in 23 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 0)
+[pid: 41067|app: 0|req: 62/74] 192.168.70.49 () {42 vars in 742 bytes} [Thu Dec  7 17:13:22 2017] GET /api/v1/house/3 => generated 2542 bytes in 104 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 1)
+[pid: 41067|app: 0|req: 63/75] 192.168.70.51 () {42 vars in 914 bytes} [Thu Dec  7 17:13:22 2017] GET /api/v1/house/search?aid=5&sd=2017-12-08&ed=2017-12-10&sk=new&area=1 => generated 1144 bytes in 92 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 0)
+[pid: 41067|app: 0|req: 64/76] 192.168.70.23 () {42 vars in 767 bytes} [Thu Dec  7 17:13:23 2017] GET /api/v1/order/ => generated 13 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 214 bytes (2 switches on core 1)
+[pid: 41070|app: 0|req: 13/77] 192.168.70.54 () {42 vars in 909 bytes} [Thu Dec  7 17:13:23 2017] GET /api/v1/house/search?aid=1&sd=2017-12-11&ed=2017-12-13&sk=new&area=1 => generated 590 bytes in 12 msecs (HTTP/1.1 200) 3 headers in 215 bytes (2 switches on core 0)
+[pid: 41070|app: 0|req: 14/78] 192.168.70.51 () {42 vars in 914 bytes} [Thu Dec  7 17:13:24 2017] GET /api/v1/house/search?aid=5&sd=2017-12-08&ed=2017-12-10&sk=new&area=1 => generated 1144 bytes in 26 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 1)
+[pid: 41067|app: 0|req: 65/79] 192.168.70.23 () {42 vars in 761 bytes} [Thu Dec  7 17:13:24 2017] GET /api/v1/user/ => generated 133 bytes in 7 msecs (HTTP/1.1 200) 3 headers in 215 bytes (2 switches on core 0)
+[pid: 41067|app: 0|req: 66/80] 192.168.70.51 () {42 vars in 914 bytes} [Thu Dec  7 17:13:24 2017] GET /api/v1/house/search?aid=5&sd=2017-12-08&ed=2017-12-10&sk=new&area=1 => generated 1144 bytes in 33 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 1)
+[pid: 41067|app: 0|req: 67/81] 192.168.70.23 () {42 vars in 766 bytes} [Thu Dec  7 17:13:26 2017] GET /api/v1/house/index => generated 1175 bytes in 15 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 0)
+[pid: 41067|app: 0|req: 68/82] 192.168.70.37 () {42 vars in 747 bytes} [Thu Dec  7 17:13:32 2017] GET /api/v1/house/2 => generated 2242 bytes in 19 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 1)
+[pid: 41067|app: 0|req: 69/83] 192.168.70.46 () {48 vars in 920 bytes} [Thu Dec  7 17:13:33 2017] POST /api/v1/house/ => generated 26 bytes in 29 msecs (HTTP/1.1 200) 3 headers in 214 bytes (2 switches on core 0)
+[pid: 41067|app: 0|req: 70/84] 192.168.70.54 () {42 vars in 925 bytes} [Thu Dec  7 17:13:34 2017] GET /api/v1/house/search?aid=1&sd=2017-12-11&ed=2017-12-13&sk=booking&area=renew => generated 24 bytes in 84 msecs (HTTP/1.1 200) 3 headers in 214 bytes (2 switches on core 1)
+[pid: 41067|app: 0|req: 71/85] 192.168.70.54 () {42 vars in 733 bytes} [Thu Dec  7 17:13:36 2017] GET /api/v1/house/index => generated 1400 bytes in 21 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 0)
+[pid: 41067|app: 0|req: 72/86] 192.168.70.49 () {42 vars in 755 bytes} [Thu Dec  7 17:13:36 2017] GET /api/v1/order/house/3 => generated 280 bytes in 27 msecs (HTTP/1.1 200) 3 headers in 215 bytes (2 switches on core 1)
+[pid: 41067|app: 0|req: 73/87] 192.168.70.23 () {42 vars in 942 bytes} [Thu Dec  7 17:13:37 2017] GET /api/v1/house/search?aid=5&sd=2017-12-07&ed=2017-12-22&sk=new&area=1 => generated 859 bytes in 20 msecs (HTTP/1.1 200) 3 headers in 215 bytes (2 switches on core 0)
+[pid: 41067|app: 0|req: 74/88] 192.168.70.40 () {42 vars in 742 bytes} [Thu Dec  7 17:13:37 2017] GET /api/v1/house/3 => generated 2542 bytes in 14 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 1)
+[pid: 41067|app: 0|req: 75/89] 192.168.70.55 () {42 vars in 742 bytes} [Thu Dec  7 17:13:38 2017] GET /api/v1/house/2 => generated 2242 bytes in 21 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 0)
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./api_v1/house_views.py", line 142, in search
+    area_id=int(dict.get('aid'))
+ValueError: invalid literal for int() with base 10: ''
+[pid: 41067|app: 0|req: 76/90] 192.168.70.50 () {42 vars in 840 bytes} [Thu Dec  7 17:13:38 2017] GET /api/v1/house/search?aid=&sd=&ed=&sk=new&area=1 => generated 0 bytes in 9 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 1)
+[pid: 41067|app: 0|req: 77/91] 192.168.70.24 () {40 vars in 686 bytes} [Thu Dec  7 17:13:38 2017] GET /api/v1/house/index => generated 1400 bytes in 17 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 0)
+[pid: 41067|app: 0|req: 78/92] 192.168.70.23 () {42 vars in 774 bytes} [Thu Dec  7 17:13:38 2017] GET /api/v1/house/3 => generated 2542 bytes in 84 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 1)
+[pid: 41067|app: 0|req: 79/93] 192.168.70.27 () {42 vars in 883 bytes} [Thu Dec  7 17:13:38 2017] GET /api/v1/house/search?aid=5&sd=2017-12-11&ed=2017-12-12&sk=new&area=1 => generated 1144 bytes in 64 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 0)
+[pid: 41067|app: 0|req: 80/94] 192.168.70.51 () {42 vars in 914 bytes} [Thu Dec  7 17:13:39 2017] GET /api/v1/house/search?aid=5&sd=2017-12-08&ed=2017-12-10&sk=new&area=1 => generated 1144 bytes in 31 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 1)
+[pid: 41067|app: 0|req: 81/95] 192.168.70.23 () {42 vars in 787 bytes} [Thu Dec  7 17:13:40 2017] GET /api/v1/order/house/3 => generated 280 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 215 bytes (2 switches on core 0)
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./api_v1/order_views.py", line 23, in booking
+    start_date=datetime.strptime(dict.get('start_date'),'%Y-%m-%d')
+  File "/usr/lib/python2.7/_strptime.py", line 332, in _strptime
+    (data_string, format))
+ValueError: time data '' does not match format '%Y-%m-%d'
+[pid: 41067|app: 0|req: 82/96] 192.168.70.49 () {48 vars in 921 bytes} [Thu Dec  7 17:13:40 2017] POST /api/v1/order/ => generated 0 bytes in 10 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 1)
+[pid: 41067|app: 0|req: 83/97] 192.168.70.52 () {42 vars in 734 bytes} [Thu Dec  7 17:13:41 2017] GET /api/v1/house/index => generated 1400 bytes in 29 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 0)
+[pid: 41067|app: 0|req: 84/98] 192.168.70.50 () {42 vars in 754 bytes} [Thu Dec  7 17:13:42 2017] GET /api/v1/house/index => generated 1400 bytes in 14 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 1)
+[pid: 41067|app: 0|req: 85/99] 192.168.70.51 () {42 vars in 738 bytes} [Thu Dec  7 17:13:43 2017] GET /api/v1/house/index => generated 1400 bytes in 34 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 0)
+[pid: 41067|app: 0|req: 86/100] 192.168.70.42 () {42 vars in 741 bytes} [Thu Dec  7 17:13:43 2017] GET /api/v1/house/index => generated 1400 bytes in 17 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 1)
+[pid: 41067|app: 0|req: 87/101] 192.168.70.27 () {42 vars in 733 bytes} [Thu Dec  7 17:13:44 2017] GET /api/v1/house/2 => generated 2242 bytes in 17 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 0)
+[pid: 41067|app: 0|req: 88/102] 192.168.70.51 () {42 vars in 738 bytes} [Thu Dec  7 17:13:45 2017] GET /api/v1/house/index => generated 1400 bytes in 16 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 1)
+[pid: 41067|app: 0|req: 89/103] 192.168.70.23 () {48 vars in 947 bytes} [Thu Dec  7 17:13:46 2017] POST /api/v1/order/ => generated 13 bytes in 11 msecs (HTTP/1.1 200) 3 headers in 214 bytes (2 switches on core 0)
+[pid: 41067|app: 0|req: 90/104] 192.168.70.23 () {42 vars in 767 bytes} [Thu Dec  7 17:13:46 2017] GET /api/v1/order/ => generated 280 bytes in 7 msecs (HTTP/1.1 200) 3 headers in 215 bytes (2 switches on core 1)
+[pid: 41067|app: 0|req: 91/105] 192.168.70.24 () {40 vars in 744 bytes} [Thu Dec  7 17:13:47 2017] GET /api/v1/user/yzm?1 => generated 3451 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 210 bytes (1 switches on core 0)
+[pid: 41067|app: 0|req: 92/106] 192.168.70.24 () {40 vars in 744 bytes} [Thu Dec  7 17:13:47 2017] GET /api/v1/user/yzm?1 => generated 3819 bytes in 11 msecs (HTTP/1.1 200) 3 headers in 210 bytes (1 switches on core 1)
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./api_v1/order_views.py", line 38, in booking
+    order.user_id=session['user_id']
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/werkzeug/local.py", line 377, in <lambda>
+    __getitem__ = lambda x, i: x._get_current_object()[i]
+KeyError: 'user_id'
+[pid: 41067|app: 0|req: 93/107] 192.168.70.49 () {48 vars in 921 bytes} [Thu Dec  7 17:13:47 2017] POST /api/v1/order/ => generated 0 bytes in 13 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+[pid: 41067|app: 0|req: 94/108] 192.168.70.50 () {42 vars in 762 bytes} [Thu Dec  7 17:13:47 2017] GET /api/v1/house/2 => generated 2242 bytes in 26 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 1)
+[pid: 41067|app: 0|req: 95/109] 192.168.70.24 () {40 vars in 746 bytes} [Thu Dec  7 17:13:47 2017] GET /api/v1/user/yzm?11 => generated 3287 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 210 bytes (1 switches on core 0)
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./api_v1/order_views.py", line 38, in booking
+    order.user_id=session['user_id']
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/werkzeug/local.py", line 377, in <lambda>
+    __getitem__ = lambda x, i: x._get_current_object()[i]
+KeyError: 'user_id'
+[pid: 41067|app: 0|req: 96/110] 192.168.70.49 () {48 vars in 921 bytes} [Thu Dec  7 17:13:48 2017] POST /api/v1/order/ => generated 0 bytes in 7 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 1)
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./api_v1/order_views.py", line 38, in booking
+    order.user_id=session['user_id']
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/werkzeug/local.py", line 377, in <lambda>
+    __getitem__ = lambda x, i: x._get_current_object()[i]
+KeyError: 'user_id'
+[pid: 41067|app: 0|req: 97/111] 192.168.70.49 () {48 vars in 921 bytes} [Thu Dec  7 17:13:48 2017] POST /api/v1/order/ => generated 0 bytes in 9 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+[pid: 41067|app: 0|req: 98/112] 192.168.70.23 () {42 vars in 761 bytes} [Thu Dec  7 17:13:49 2017] GET /api/v1/user/ => generated 133 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 215 bytes (2 switches on core 1)
+[pid: 41067|app: 0|req: 99/113] 192.168.70.27 () {42 vars in 746 bytes} [Thu Dec  7 17:13:49 2017] GET /api/v1/order/house/2 => generated 295 bytes in 32 msecs (HTTP/1.1 200) 3 headers in 215 bytes (2 switches on core 0)
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./api_v1/order_views.py", line 38, in booking
+    order.user_id=session['user_id']
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/werkzeug/local.py", line 377, in <lambda>
+    __getitem__ = lambda x, i: x._get_current_object()[i]
+KeyError: 'user_id'
+[pid: 41067|app: 0|req: 100/114] 192.168.70.49 () {48 vars in 921 bytes} [Thu Dec  7 17:13:49 2017] POST /api/v1/order/ => generated 0 bytes in 7 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 1)
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./api_v1/order_views.py", line 38, in booking
+    order.user_id=session['user_id']
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/werkzeug/local.py", line 377, in <lambda>
+    __getitem__ = lambda x, i: x._get_current_object()[i]
+KeyError: 'user_id'
+[pid: 41067|app: 0|req: 101/115] 192.168.70.49 () {48 vars in 921 bytes} [Thu Dec  7 17:13:49 2017] POST /api/v1/order/ => generated 0 bytes in 7 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./api_v1/order_views.py", line 38, in booking
+    order.user_id=session['user_id']
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/werkzeug/local.py", line 377, in <lambda>
+    __getitem__ = lambda x, i: x._get_current_object()[i]
+KeyError: 'user_id'
+[pid: 41067|app: 0|req: 102/116] 192.168.70.49 () {48 vars in 921 bytes} [Thu Dec  7 17:13:49 2017] POST /api/v1/order/ => generated 0 bytes in 22 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 1)
+[pid: 41067|app: 0|req: 103/117] 192.168.70.21 () {42 vars in 880 bytes} [Thu Dec  7 17:13:49 2017] GET /api/v1/house/search?aid=3&sd=2017-12-14&ed=&sk=new&area=1 => generated 590 bytes in 50 msecs (HTTP/1.1 200) 3 headers in 215 bytes (2 switches on core 0)
+[pid: 41068|app: 0|req: 1/118] 192.168.70.55 () {42 vars in 755 bytes} [Thu Dec  7 17:13:49 2017] GET /api/v1/order/house/2 => generated 295 bytes in 705 msecs (HTTP/1.1 200) 3 headers in 215 bytes (2 switches on core 0)
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./api_v1/house_views.py", line 142, in search
+    area_id=int(dict.get('aid'))
+ValueError: invalid literal for int() with base 10: ''
+[pid: 41067|app: 0|req: 104/119] 192.168.70.51 () {42 vars in 824 bytes} [Thu Dec  7 17:13:50 2017] GET /api/v1/house/search?aid=&sd=&ed=&sk=new&area=1 => generated 0 bytes in 3 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 1)
+[pid: 41067|app: 0|req: 105/120] 192.168.70.50 () {42 vars in 775 bytes} [Thu Dec  7 17:13:51 2017] GET /api/v1/order/house/2 => generated 295 bytes in 11 msecs (HTTP/1.1 200) 3 headers in 215 bytes (2 switches on core 0)
+[pid: 41067|app: 0|req: 106/121] 192.168.70.23 () {42 vars in 768 bytes} [Thu Dec  7 17:13:51 2017] GET /api/v1/house/ => generated 540 bytes in 18 msecs (HTTP/1.1 200) 3 headers in 215 bytes (2 switches on core 1)
+[pid: 41067|app: 0|req: 107/122] 192.168.70.22 () {42 vars in 843 bytes} [Thu Dec  7 17:13:51 2017] GET /api/v1/house/search?aid=5&sd=2017-12-15&ed=2017-12-20&sk=new&area=1 => generated 1144 bytes in 25 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 0)
+[pid: 41067|app: 0|req: 108/123] 192.168.70.23 () {42 vars in 774 bytes} [Thu Dec  7 17:13:53 2017] GET /api/v1/house/2 => generated 2242 bytes in 30 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 1)
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./api_v1/house_views.py", line 142, in search
+    area_id=int(dict.get('aid'))
+ValueError: invalid literal for int() with base 10: ''
+[pid: 41067|app: 0|req: 109/124] 192.168.70.51 () {42 vars in 824 bytes} [Thu Dec  7 17:13:54 2017] GET /api/v1/house/search?aid=&sd=&ed=&sk=new&area=1 => generated 0 bytes in 6 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./api_v1/order_views.py", line 38, in booking
+    order.user_id=session['user_id']
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/werkzeug/local.py", line 377, in <lambda>
+    __getitem__ = lambda x, i: x._get_current_object()[i]
+KeyError: 'user_id'
+[pid: 41068|app: 0|req: 2/125] 192.168.70.27 () {48 vars in 907 bytes} [Thu Dec  7 17:13:55 2017] POST /api/v1/order/ => generated 0 bytes in 9 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 1)
+[pid: 41067|app: 0|req: 110/126] 192.168.70.21 () {42 vars in 888 bytes} [Thu Dec  7 17:13:57 2017] GET /api/v1/house/search?aid=3&sd=2017-12-14&ed=&sk=new&area=renew => generated 24 bytes in 21 msecs (HTTP/1.1 200) 3 headers in 214 bytes (2 switches on core 1)
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./api_v1/order_views.py", line 38, in booking
+    order.user_id=session['user_id']
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/werkzeug/local.py", line 377, in <lambda>
+    __getitem__ = lambda x, i: x._get_current_object()[i]
+KeyError: 'user_id'
+    response = self.full_dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./api_v1/order_views.py", line 38, in booking
+    order.user_id=session['user_id']
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/werkzeug/local.py", line 377, in <lambda>
+    __getitem__ = lambda x, i: x._get_current_object()[i]
+KeyError: 'user_id'
+[pid: 41067|app: 0|req: 112/128] 192.168.70.27 () {48 vars in 907 bytes} [Thu Dec  7 17:13:57 2017] POST /api/v1/order/ => generated 0 bytes in 27 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 1)
+[pid: 41067|app: 0|req: 112/128] 192.168.70.50 () {48 vars in 941 bytes} [Thu Dec  7 17:13:57 2017] POST /api/v1/order/ => generated 0 bytes in 57 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./api_v1/order_views.py", line 38, in booking
+    order.user_id=session['user_id']
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/werkzeug/local.py", line 377, in <lambda>
+    __getitem__ = lambda x, i: x._get_current_object()[i]
+KeyError: 'user_id'
+[pid: 41070|app: 0|req: 15/129] 192.168.70.27 () {48 vars in 907 bytes} [Thu Dec  7 17:13:57 2017] POST /api/v1/order/ => generated 0 bytes in 12 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./api_v1/order_views.py", line 38, in booking
+    order.user_id=session['user_id']
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/werkzeug/local.py", line 377, in <lambda>
+    __getitem__ = lambda x, i: x._get_current_object()[i]
+KeyError: 'user_id'
+[pid: 41067|app: 0|req: 113/130] 192.168.70.50 () {48 vars in 941 bytes} [Thu Dec  7 17:13:58 2017] POST /api/v1/order/ => generated 0 bytes in 44 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 1)
+[pid: 41070|app: 0|req: 16/131] 192.168.70.52 () {42 vars in 734 bytes} [Thu Dec  7 17:13:58 2017] GET /api/v1/house/index => generated 1400 bytes in 62 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 1)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): uc.qbox.me
+[pid: 41067|app: 0|req: 115/132] 192.168.70.54 () {42 vars in 909 bytes} [Thu Dec  7 17:14:15 2017] GET /api/v1/house/search?aid=5&sd=2017-12-11&ed=2017-12-13&sk=new&area=1 => generated 1144 bytes in 101 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 1)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): uc.qbox.me
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): uc.qbox.me
+[pid: 41070|app: 0|req: 18/133] 192.168.70.22 () {42 vars in 693 bytes} [Thu Dec  7 17:14:33 2017] GET /api/v1/house/2 => generated 2242 bytes in 23 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 1)
+[pid: 41068|app: 0|req: 3/134] 192.168.70.54 () {42 vars in 741 bytes} [Thu Dec  7 17:14:34 2017] GET /api/v1/house/3 => generated 2542 bytes in 49 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 0)
+[pid: 41070|app: 0|req: 19/135] 192.168.70.22 () {42 vars in 706 bytes} [Thu Dec  7 17:14:51 2017] GET /api/v1/order/house/2 => generated 295 bytes in 35 msecs (HTTP/1.1 200) 3 headers in 215 bytes (2 switches on core 1)
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./api_v1/order_views.py", line 38, in booking
+    order.user_id=session['user_id']
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/werkzeug/local.py", line 377, in <lambda>
+    __getitem__ = lambda x, i: x._get_current_object()[i]
+KeyError: 'user_id'
+[pid: 41068|app: 0|req: 4/136] 192.168.70.22 () {48 vars in 867 bytes} [Thu Dec  7 17:14:59 2017] POST /api/v1/order/ => generated 0 bytes in 5 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 1)
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./api_v1/order_views.py", line 38, in booking
+    order.user_id=session['user_id']
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/werkzeug/local.py", line 377, in <lambda>
+    __getitem__ = lambda x, i: x._get_current_object()[i]
+KeyError: 'user_id'
+[pid: 41068|app: 0|req: 5/137] 192.168.70.22 () {48 vars in 867 bytes} [Thu Dec  7 17:15:04 2017] POST /api/v1/order/ => generated 0 bytes in 8 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./api_v1/order_views.py", line 38, in booking
+    order.user_id=session['user_id']
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/werkzeug/local.py", line 377, in <lambda>
+    __getitem__ = lambda x, i: x._get_current_object()[i]
+KeyError: 'user_id'
+[pid: 41070|app: 0|req: 20/138] 192.168.70.22 () {48 vars in 867 bytes} [Thu Dec  7 17:15:04 2017] POST /api/v1/order/ => generated 0 bytes in 27 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 1)
+[pid: 41068|app: 0|req: 6/139] 192.168.70.46 () {42 vars in 737 bytes} [Thu Dec  7 17:15:12 2017] GET /api/v1/house/ => generated 540 bytes in 25 msecs (HTTP/1.1 200) 3 headers in 215 bytes (2 switches on core 1)
+[pid: 41070|app: 0|req: 21/140] 192.168.70.46 () {42 vars in 743 bytes} [Thu Dec  7 17:15:18 2017] GET /api/v1/house/4 => generated 1961 bytes in 133 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 1)
+[pid: 41068|app: 0|req: 7/141] 192.168.70.54 () {42 vars in 741 bytes} [Thu Dec  7 17:15:23 2017] GET /api/v1/house/2 => generated 2242 bytes in 20 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 0)
+[pid: 41070|app: 0|req: 22/142] 192.168.70.46 () {42 vars in 743 bytes} [Thu Dec  7 17:15:28 2017] GET /api/v1/house/2 => generated 2242 bytes in 33 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 1)
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./api_v1/house_views.py", line 142, in search
+    area_id=int(dict.get('aid'))
+ValueError: invalid literal for int() with base 10: ''
+[pid: 41068|app: 0|req: 8/143] 192.168.70.51 () {42 vars in 824 bytes} [Thu Dec  7 17:15:35 2017] GET /api/v1/house/search?aid=&sd=&ed=&sk=new&area=1 => generated 0 bytes in 4 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 1)
+[pid: 41068|app: 0|req: 9/144] 192.168.70.51 () {42 vars in 738 bytes} [Thu Dec  7 17:15:39 2017] GET /api/v1/house/index => generated 1400 bytes in 59 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 0)
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./api_v1/house_views.py", line 142, in search
+    area_id=int(dict.get('aid'))
+ValueError: invalid literal for int() with base 10: ''
+[pid: 41070|app: 0|req: 23/145] 192.168.70.51 () {42 vars in 824 bytes} [Thu Dec  7 17:15:45 2017] GET /api/v1/house/search?aid=&sd=&ed=&sk=new&area=1 => generated 0 bytes in 14 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 1)
+[pid: 41068|app: 0|req: 10/146] 192.168.70.54 () {42 vars in 754 bytes} [Thu Dec  7 17:15:45 2017] GET /api/v1/order/house/2 => generated 295 bytes in 47 msecs (HTTP/1.1 200) 3 headers in 215 bytes (2 switches on core 1)
+[pid: 41070|app: 0|req: 24/147] 192.168.70.51 () {42 vars in 738 bytes} [Thu Dec  7 17:15:48 2017] GET /api/v1/house/index => generated 1400 bytes in 41 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 1)
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./api_v1/order_views.py", line 38, in booking
+    order.user_id=session['user_id']
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/werkzeug/local.py", line 377, in <lambda>
+    __getitem__ = lambda x, i: x._get_current_object()[i]
+KeyError: 'user_id'
+[pid: 41068|app: 0|req: 11/148] 192.168.70.54 () {48 vars in 920 bytes} [Thu Dec  7 17:15:52 2017] POST /api/v1/order/ => generated 0 bytes in 22 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./api_v1/order_views.py", line 38, in booking
+    order.user_id=session['user_id']
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/werkzeug/local.py", line 377, in <lambda>
+    __getitem__ = lambda x, i: x._get_current_object()[i]
+KeyError: 'user_id'
+[pid: 41070|app: 0|req: 25/149] 192.168.70.54 () {48 vars in 920 bytes} [Thu Dec  7 17:15:55 2017] POST /api/v1/order/ => generated 0 bytes in 7 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 1)
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./api_v1/order_views.py", line 38, in booking
+    order.user_id=session['user_id']
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/werkzeug/local.py", line 377, in <lambda>
+    __getitem__ = lambda x, i: x._get_current_object()[i]
+KeyError: 'user_id'
+[pid: 41068|app: 0|req: 12/150] 192.168.70.54 () {48 vars in 920 bytes} [Thu Dec  7 17:15:55 2017] POST /api/v1/order/ => generated 0 bytes in 18 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 1)
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./api_v1/order_views.py", line 38, in booking
+    order.user_id=session['user_id']
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/werkzeug/local.py", line 377, in <lambda>
+    __getitem__ = lambda x, i: x._get_current_object()[i]
+KeyError: 'user_id'
+[pid: 41070|app: 0|req: 26/151] 192.168.70.54 () {48 vars in 920 bytes} [Thu Dec  7 17:15:56 2017] POST /api/v1/order/ => generated 0 bytes in 20 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 1)
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./api_v1/order_views.py", line 38, in booking
+    order.user_id=session['user_id']
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/werkzeug/local.py", line 377, in <lambda>
+    __getitem__ = lambda x, i: x._get_current_object()[i]
+KeyError: 'user_id'
+[pid: 41068|app: 0|req: 13/152] 192.168.70.54 () {48 vars in 920 bytes} [Thu Dec  7 17:15:56 2017] POST /api/v1/order/ => generated 0 bytes in 20 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./api_v1/order_views.py", line 38, in booking
+    order.user_id=session['user_id']
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/werkzeug/local.py", line 377, in <lambda>
+    __getitem__ = lambda x, i: x._get_current_object()[i]
+KeyError: 'user_id'
+[pid: 41070|app: 0|req: 27/153] 192.168.70.54 () {48 vars in 920 bytes} [Thu Dec  7 17:16:00 2017] POST /api/v1/order/ => generated 0 bytes in 6 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 1)
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./api_v1/order_views.py", line 38, in booking
+    order.user_id=session['user_id']
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/werkzeug/local.py", line 377, in <lambda>
+    __getitem__ = lambda x, i: x._get_current_object()[i]
+KeyError: 'user_id'
+[pid: 41068|app: 0|req: 14/154] 192.168.70.54 () {48 vars in 920 bytes} [Thu Dec  7 17:16:00 2017] POST /api/v1/order/ => generated 0 bytes in 43 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 1)
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./api_v1/order_views.py", line 38, in booking
+    order.user_id=session['user_id']
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/werkzeug/local.py", line 377, in <lambda>
+    __getitem__ = lambda x, i: x._get_current_object()[i]
+KeyError: 'user_id'
+[pid: 41070|app: 0|req: 28/155] 192.168.70.54 () {48 vars in 920 bytes} [Thu Dec  7 17:16:01 2017] POST /api/v1/order/ => generated 0 bytes in 20 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 1)
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./api_v1/order_views.py", line 38, in booking
+    order.user_id=session['user_id']
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/werkzeug/local.py", line 377, in <lambda>
+    __getitem__ = lambda x, i: x._get_current_object()[i]
+KeyError: 'user_id'
+[pid: 41068|app: 0|req: 15/156] 192.168.70.54 () {48 vars in 920 bytes} [Thu Dec  7 17:16:04 2017] POST /api/v1/order/ => generated 0 bytes in 5 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./api_v1/order_views.py", line 38, in booking
+    order.user_id=session['user_id']
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/werkzeug/local.py", line 377, in <lambda>
+    __getitem__ = lambda x, i: x._get_current_object()[i]
+KeyError: 'user_id'
+[pid: 41068|app: 0|req: 16/157] 192.168.70.54 () {48 vars in 920 bytes} [Thu Dec  7 17:16:04 2017] POST /api/v1/order/ => generated 0 bytes in 7 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 1)
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./api_v1/order_views.py", line 38, in booking
+    order.user_id=session['user_id']
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/werkzeug/local.py", line 377, in <lambda>
+    __getitem__ = lambda x, i: x._get_current_object()[i]
+KeyError: 'user_id'
+[pid: 41070|app: 0|req: 29/158] 192.168.70.54 () {48 vars in 920 bytes} [Thu Dec  7 17:16:04 2017] POST /api/v1/order/ => generated 0 bytes in 8 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 1)
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./api_v1/order_views.py", line 38, in booking
+    order.user_id=session['user_id']
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/werkzeug/local.py", line 377, in <lambda>
+    __getitem__ = lambda x, i: x._get_current_object()[i]
+KeyError: 'user_id'
+[pid: 41068|app: 0|req: 17/159] 192.168.70.54 () {48 vars in 920 bytes} [Thu Dec  7 17:16:06 2017] POST /api/v1/order/ => generated 0 bytes in 19 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./api_v1/order_views.py", line 38, in booking
+    order.user_id=session['user_id']
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/werkzeug/local.py", line 377, in <lambda>
+    __getitem__ = lambda x, i: x._get_current_object()[i]
+KeyError: 'user_id'
+[pid: 41070|app: 0|req: 30/160] 192.168.70.54 () {48 vars in 920 bytes} [Thu Dec  7 17:16:06 2017] POST /api/v1/order/ => generated 0 bytes in 11 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 1)
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./api_v1/order_views.py", line 38, in booking
+    order.user_id=session['user_id']
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/werkzeug/local.py", line 377, in <lambda>
+    __getitem__ = lambda x, i: x._get_current_object()[i]
+KeyError: 'user_id'
+[pid: 41068|app: 0|req: 18/161] 192.168.70.54 () {48 vars in 920 bytes} [Thu Dec  7 17:16:06 2017] POST /api/v1/order/ => generated 0 bytes in 9 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 1)
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./api_v1/order_views.py", line 38, in booking
+    order.user_id=session['user_id']
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/werkzeug/local.py", line 377, in <lambda>
+    __getitem__ = lambda x, i: x._get_current_object()[i]
+KeyError: 'user_id'
+[pid: 41070|app: 0|req: 31/162] 192.168.70.54 () {48 vars in 920 bytes} [Thu Dec  7 17:16:07 2017] POST /api/v1/order/ => generated 0 bytes in 30 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 1)
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./api_v1/order_views.py", line 38, in booking
+    order.user_id=session['user_id']
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/werkzeug/local.py", line 377, in <lambda>
+    __getitem__ = lambda x, i: x._get_current_object()[i]
+KeyError: 'user_id'
+[pid: 41068|app: 0|req: 19/163] 192.168.70.54 () {48 vars in 920 bytes} [Thu Dec  7 17:16:07 2017] POST /api/v1/order/ => generated 0 bytes in 26 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./api_v1/order_views.py", line 38, in booking
+    order.user_id=session['user_id']
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/werkzeug/local.py", line 377, in <lambda>
+    __getitem__ = lambda x, i: x._get_current_object()[i]
+KeyError: 'user_id'
+[pid: 41070|app: 0|req: 32/164] 192.168.70.54 () {48 vars in 920 bytes} [Thu Dec  7 17:16:07 2017] POST /api/v1/order/ => generated 0 bytes in 17 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 1)
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./api_v1/order_views.py", line 38, in booking
+    order.user_id=session['user_id']
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/werkzeug/local.py", line 377, in <lambda>
+    __getitem__ = lambda x, i: x._get_current_object()[i]
+KeyError: 'user_id'
+[pid: 41068|app: 0|req: 20/165] 192.168.70.54 () {48 vars in 920 bytes} [Thu Dec  7 17:16:11 2017] POST /api/v1/order/ => generated 0 bytes in 13 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 1)
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./api_v1/order_views.py", line 38, in booking
+    order.user_id=session['user_id']
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/werkzeug/local.py", line 377, in <lambda>
+    __getitem__ = lambda x, i: x._get_current_object()[i]
+KeyError: 'user_id'
+[pid: 41070|app: 0|req: 33/166] 192.168.70.54 () {48 vars in 920 bytes} [Thu Dec  7 17:16:11 2017] POST /api/v1/order/ => generated 0 bytes in 6 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 1)
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./api_v1/order_views.py", line 38, in booking
+    order.user_id=session['user_id']
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/werkzeug/local.py", line 377, in <lambda>
+    __getitem__ = lambda x, i: x._get_current_object()[i]
+KeyError: 'user_id'
+[pid: 41068|app: 0|req: 21/167] 192.168.70.54 () {48 vars in 920 bytes} [Thu Dec  7 17:16:12 2017] POST /api/v1/order/ => generated 0 bytes in 26 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./api_v1/order_views.py", line 38, in booking
+    order.user_id=session['user_id']
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/werkzeug/local.py", line 377, in <lambda>
+    __getitem__ = lambda x, i: x._get_current_object()[i]
+KeyError: 'user_id'
+[pid: 41070|app: 0|req: 34/168] 192.168.70.54 () {48 vars in 920 bytes} [Thu Dec  7 17:16:12 2017] POST /api/v1/order/ => generated 0 bytes in 5 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 1)
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./api_v1/order_views.py", line 38, in booking
+    order.user_id=session['user_id']
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/werkzeug/local.py", line 377, in <lambda>
+    __getitem__ = lambda x, i: x._get_current_object()[i]
+KeyError: 'user_id'
+[pid: 41068|app: 0|req: 22/169] 192.168.70.54 () {48 vars in 920 bytes} [Thu Dec  7 17:16:12 2017] POST /api/v1/order/ => generated 0 bytes in 8 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 1)
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./api_v1/order_views.py", line 38, in booking
+    order.user_id=session['user_id']
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/werkzeug/local.py", line 377, in <lambda>
+    __getitem__ = lambda x, i: x._get_current_object()[i]
+KeyError: 'user_id'
+[pid: 41070|app: 0|req: 35/170] 192.168.70.54 () {48 vars in 920 bytes} [Thu Dec  7 17:16:12 2017] POST /api/v1/order/ => generated 0 bytes in 10 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 1)
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./api_v1/order_views.py", line 38, in booking
+    order.user_id=session['user_id']
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/werkzeug/local.py", line 377, in <lambda>
+    __getitem__ = lambda x, i: x._get_current_object()[i]
+KeyError: 'user_id'
+[pid: 41068|app: 0|req: 23/171] 192.168.70.54 () {48 vars in 920 bytes} [Thu Dec  7 17:16:17 2017] POST /api/v1/order/ => generated 0 bytes in 6 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 0)
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1985, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1540, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "./api_v1/order_views.py", line 38, in booking
+    order.user_id=session['user_id']
+  File "/home/python/.virtualenvs/flask_py2/local/lib/python2.7/site-packages/werkzeug/local.py", line 377, in <lambda>
+    __getitem__ = lambda x, i: x._get_current_object()[i]
+KeyError: 'user_id'
+[pid: 41068|app: 0|req: 24/172] 192.168.70.54 () {48 vars in 920 bytes} [Thu Dec  7 17:16:17 2017] POST /api/v1/order/ => generated 0 bytes in 12 msecs (HTTP/1.1 500) 0 headers in 0 bytes (0 switches on core 1)
+[pid: 41070|app: 0|req: 36/173] 192.168.70.46 () {42 vars in 743 bytes} [Thu Dec  7 17:16:29 2017] GET /api/v1/house/4 => generated 1961 bytes in 35 msecs (HTTP/1.1 200) 3 headers in 216 bytes (2 switches on core 1)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
