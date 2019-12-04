@@ -3,8 +3,13 @@ from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 from werkzeug.security import generate_password_hash,check_password_hash
 from flask import current_app
+from manager import create_app
+from config import DevelopConfig
 
-db=SQLAlchemy()
+app=create_app(DevelopConfig)
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:88899210@127.0.0.1:3306/test1'
+
+db = SQLAlchemy(app)
 
 class BaseModel(object):
     create_time=db.Column(db.DATETIME,default=datetime.now())
@@ -206,3 +211,6 @@ class Order(BaseModel,db.Model):
             'status':self.status,
             'comment':self.comment
         }
+
+if __name__ == '__main__':
+    db.create_all()

@@ -3,7 +3,7 @@
 import hashlib
 class Config:
     DEBUG=False
-    SQLALCHEMY_DATABASE_URI='mysql://root:mysql88899210@127.0.0.1:3306/test1'
+    SQLALCHEMY_DATABASE_URI='mysql://root:88899210@127.0.0.1:3306/test1'
     SQLALCHEMY_TRACK_MODIFICATIONS = True
 #PIL pillow
     # #redis配置

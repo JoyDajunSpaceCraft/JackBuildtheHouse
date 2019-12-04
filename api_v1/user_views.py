@@ -10,7 +10,7 @@ from models import User
 import random
 import logging
 # from qiniu_sdk import put_qiniu
-from my_decorators import is_login
+# from my_decorators import is_login
 
 # @user_blueprint.route('/yzm')
 # def yzm():
@@ -55,19 +55,19 @@ def user_register():
     #接收参数
     dict=request.form
     mobile=dict.get('mobile')
-    imagecode=dict.get('imagecode')
-    phonecode=dict.get('phonecode')
+    # imagecode=dict.get('imagecode')
+    # phonecode=dict.get('phonecode')
     password=dict.get('password')
     password2=dict.get('password2')
     #验证参数是否存在
-    if not all([mobile,imagecode,phonecode,password,password2]):
+    if not all([mobile, password, password2]):
         return jsonify(code=RET.PARAMERR,msg=ret_map[RET.PARAMERR])
     #验证图片验证码
-    if imagecode!=session['image_yzm']:
-        return jsonify(code=RET.PARAMERR,msg=u'图片验证码错误')
-    #验证短信验证码
-    if int(phonecode)!=session['sms_yzm']:
-        return jsonify(code=RET.PARAMERR,msg=u'短信验证码错误')
+    # if imagecode!=session['image_yzm']:
+    #     return jsonify(code=RET.PARAMERR,msg=u'图片验证码错误')
+    # #验证短信验证码
+    # if int(phonecode)!=session['sms_yzm']:
+    #     return jsonify(code=RET.PARAMERR,msg=u'短信验证码错误')
     #验证手机号是否格式正确
     if not re.match(r'^1[34578]\d{9}$',mobile):
         return jsonify(code=RET.PARAMERR,msg=u'手机号格式错误')
@@ -87,7 +87,7 @@ def user_register():
         logging.ERROR(u'用户注册更新数据库失败，手机号：%s，密码：%s'%(mobile,password))
         return jsonify(code=RET.DBERR,msg=ret_map[RET.DBERR])
 
-@is_login
+
 @user_blueprint.route('/',methods=['GET'])
 def user_my():
     #获取当前登录的用户
@@ -96,7 +96,7 @@ def user_my():
     user=User.query.get(user_id)
     return jsonify(user=user.to_basic_dict())
 
-@is_login
+#
 @user_blueprint.route('/auth',methods=['GET'])
 def user_auth():
     #获取当前登录用户的编号
@@ -106,7 +106,7 @@ def user_auth():
     #返回用户的真实姓名、身份证号
     return jsonify(user.to_auth_dict())
 
-@is_login
+
 @user_blueprint.route('/',methods=['PUT'])
 def user_profile():
     dict=request.form
@@ -150,7 +150,7 @@ def user_profile():
     else:
         return jsonify(code=RET.PARAMERR,msg=ret_map[RET.PARAMERR])
 
-@is_login
+
 @user_blueprint.route('/auth',methods=['PUT'])
 def user_auth_set():
     #接收参数

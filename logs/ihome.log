@@ -4432,3 +4432,321 @@ INFO _internal.py:122 127.0.0.1 - - [03/Dec/2019 19:32:30] "GET /static/js/ihome
 INFO _internal.py:122 127.0.0.1 - - [03/Dec/2019 19:32:30] "GET /api/v1/order/ HTTP/1.1" 500 -
 INFO _internal.py:122 127.0.0.1 - - [03/Dec/2019 19:32:36] "GET /orders.html HTTP/1.1" 304 -
 INFO _internal.py:122 127.0.0.1 - - [03/Dec/2019 19:32:36] "GET /api/v1/order/ HTTP/1.1" 500 -
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 199-873-912
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 199-873-912
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 199-873-912
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 199-873-912
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 199-873-912
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 199-873-912
+ERROR __init__.py:97 Error: Directory migrations already exists and is not empty
+ERROR __init__.py:97 Error: Directory migrations already exists and is not empty
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Restarting with stat
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 199-873-912
+INFO _internal.py:122  * Debugger PIN: 199-873-912
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:35:03] "GET / HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:35:03] "GET / HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:35:03] "GET /static/plugins/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:35:03] "GET /static/plugins/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:35:03] "GET /static/plugins/font-awesome/css/font-awesome.min.css HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:35:03] "GET /static/plugins/font-awesome/css/font-awesome.min.css HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:35:03] "GET /static/css/reset.css HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:35:03] "GET /static/css/reset.css HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:35:03] "GET /static/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:35:03] "GET /static/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:35:03] "GET /static/plugins/swiper/css/swiper.min.css HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:35:03] "GET /static/plugins/swiper/css/swiper.min.css HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:35:03] "GET /static/css/ihome/main.css HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:35:03] "GET /static/css/ihome/main.css HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:35:03] "GET /static/css/ihome/index.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:35:03] "GET /static/css/ihome/index.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:35:03] "GET /static/images/房子.png HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:35:03] "GET /static/images/房子.png HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:35:03] "GET /static/js/jquery.min.js HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:35:03] "GET /static/js/jquery.min.js HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:35:03] "GET /static/plugins/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:35:03] "GET /static/plugins/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:35:03] "GET /static/plugins/swiper/js/swiper.jquery.min.js HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:35:03] "GET /static/plugins/swiper/js/swiper.jquery.min.js HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:35:03] "GET /static/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:35:03] "GET /static/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:35:03] "GET /static/plugins/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:35:03] "GET /static/plugins/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:35:04] "GET /static/js/template.js HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:35:04] "GET /static/js/template.js HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:35:04] "GET /static/js/ihome/status_code.js HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:35:04] "GET /static/js/ihome/status_code.js HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:35:04] "GET /static/js/ihome/index.js HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:35:04] "GET /static/js/ihome/index.js HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:35:05] "GET /api/v1/house/index HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:35:05] "GET /api/v1/house/index HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:35:05] "GET /static/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:35:05] "GET /static/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 304 -
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Restarting with stat
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 199-873-912
+INFO _internal.py:122  * Debugger PIN: 199-873-912
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:39:42] "GET / HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:39:42] "GET / HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:39:42] "GET /api/v1/house/index HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:39:42] "GET /api/v1/house/index HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:39:42] "GET / HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:39:42] "GET / HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:39:43] "GET /api/v1/house/index HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:39:43] "GET /api/v1/house/index HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:39:55] "GET /search.html?aid=&aname=&sd=2019-12-11&ed=2019-12-18 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:39:55] "GET /search.html?aid=&aname=&sd=2019-12-11&ed=2019-12-18 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:39:56] "GET /static/js/ihome/search.js HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:39:56] "GET /static/js/ihome/search.js HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:39:56] "GET /static/css/ihome/search.css HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:39:56] "GET /static/css/ihome/search.css HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:39:56] "GET /api/v1/house/search?aid=&sd=2019-12-11&ed=2019-12-18&sk=new&area=1 HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:39:56] "GET /api/v1/house/search?aid=&sd=2019-12-11&ed=2019-12-18&sk=new&area=1 HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:41:12] "GET /search.html?aid=&aname=&sd=2019-12-11&ed=2019-12-18 HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:41:12] "GET /search.html?aid=&aname=&sd=2019-12-11&ed=2019-12-18 HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:41:12] "GET /api/v1/house/search?aid=&sd=2019-12-11&ed=2019-12-18&sk=new&area=1 HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:41:12] "GET /api/v1/house/search?aid=&sd=2019-12-11&ed=2019-12-18&sk=new&area=1 HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:41:17] "GET /login.html HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:41:17] "GET /login.html HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:41:17] "GET /static/css/ihome/login.css HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:41:17] "GET /static/css/ihome/login.css HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:41:17] "GET /static/js/ihome/md5.min.js HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:41:17] "GET /static/js/ihome/md5.min.js HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:41:17] "GET /static/js/ihome/login.js HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:41:17] "GET /static/js/ihome/login.js HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:41:26] "POST /api/v1/user/session?token=b96c015560280ae11f28b00318b0efb6 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:41:26] "POST /api/v1/user/session?token=b96c015560280ae11f28b00318b0efb6 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:41:56] "POST /api/v1/user/session?token=b96c015560280ae11f28b00318b0efb6 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:41:56] "POST /api/v1/user/session?token=b96c015560280ae11f28b00318b0efb6 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:41:57] "POST /api/v1/user/session?token=b96c015560280ae11f28b00318b0efb6 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:41:57] "POST /api/v1/user/session?token=b96c015560280ae11f28b00318b0efb6 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:41:58] "POST /api/v1/user/session?token=b96c015560280ae11f28b00318b0efb6 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:41:58] "POST /api/v1/user/session?token=b96c015560280ae11f28b00318b0efb6 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:41:59] "GET /login.html HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:41:59] "GET /login.html HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:42:05] "POST /api/v1/user/session?token=b96c015560280ae11f28b00318b0efb6 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:42:05] "POST /api/v1/user/session?token=b96c015560280ae11f28b00318b0efb6 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:43:03] "POST /api/v1/user/session?token=b96c015560280ae11f28b00318b0efb6 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:43:03] "POST /api/v1/user/session?token=b96c015560280ae11f28b00318b0efb6 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:43:05] "GET /login.html HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:43:05] "GET /login.html HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:43:11] "POST /api/v1/user/session?token=b96c015560280ae11f28b00318b0efb6 HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:43:11] "POST /api/v1/user/session?token=b96c015560280ae11f28b00318b0efb6 HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:43:13] "POST /api/v1/user/session?token=b96c015560280ae11f28b00318b0efb6 HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:43:13] "POST /api/v1/user/session?token=b96c015560280ae11f28b00318b0efb6 HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:43:13] "POST /api/v1/user/session?token=b96c015560280ae11f28b00318b0efb6 HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:43:13] "POST /api/v1/user/session?token=b96c015560280ae11f28b00318b0efb6 HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:43:13] "POST /api/v1/user/session?token=b96c015560280ae11f28b00318b0efb6 HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:43:13] "POST /api/v1/user/session?token=b96c015560280ae11f28b00318b0efb6 HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:43:21] "GET /register.html HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:43:21] "GET /register.html HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:43:21] "GET /static/css/ihome/register.css HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:43:21] "GET /static/css/ihome/register.css HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:43:21] "GET /static/js/ihome/register.js HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:43:21] "GET /static/js/ihome/register.js HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:43:21] "GET /api/v1/user/yzm?1 HTTP/1.1" 404 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:43:21] "GET /api/v1/user/yzm?1 HTTP/1.1" 404 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:43:21] "GET /api/v1/user/yzm?11 HTTP/1.1" 404 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:43:21] "GET /api/v1/user/yzm?11 HTTP/1.1" 404 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:46:50] "GET /api/v1/user/yzm?1 HTTP/1.1" 404 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:46:50] "GET /api/v1/user/yzm?1 HTTP/1.1" 404 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:46:50] "GET /api/v1/user/yzm?11 HTTP/1.1" 404 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:46:50] "GET /api/v1/user/yzm?11 HTTP/1.1" 404 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:51:42] "GET /register.html HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:51:42] "GET /register.html HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:51:42] "GET /api/v1/user/yzm?1 HTTP/1.1" 404 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:51:42] "GET /api/v1/user/yzm?1 HTTP/1.1" 404 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:51:42] "GET /api/v1/user/yzm?11 HTTP/1.1" 404 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:51:42] "GET /api/v1/user/yzm?11 HTTP/1.1" 404 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:51:50] "GET /static/plugins/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:51:50] "GET /static/plugins/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:53:04] "GET /register.html HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:53:04] "GET /register.html HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:53:04] "GET /api/v1/user/yzm?1 HTTP/1.1" 404 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:53:04] "GET /api/v1/user/yzm?1 HTTP/1.1" 404 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:53:04] "GET /api/v1/user/yzm?11 HTTP/1.1" 404 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:53:04] "GET /api/v1/user/yzm?11 HTTP/1.1" 404 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:53:23] "GET /register.html HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:53:23] "GET /register.html HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:53:23] "GET /static/plugins/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:53:23] "GET /static/plugins/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:53:23] "GET /static/plugins/font-awesome/css/font-awesome.min.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:53:23] "GET /static/plugins/font-awesome/css/font-awesome.min.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:53:23] "GET /static/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:53:23] "GET /static/css/reset.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:53:23] "GET /static/css/ihome/main.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:53:23] "GET /static/css/ihome/main.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:53:23] "GET /static/css/ihome/register.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:53:23] "GET /static/css/ihome/register.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:53:23] "GET /api/v1/user/yzm?1 HTTP/1.1" 404 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:53:23] "GET /api/v1/user/yzm?1 HTTP/1.1" 404 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:53:23] "GET /static/js/jquery.min.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:53:23] "GET /static/js/jquery.min.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:53:23] "GET /static/plugins/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:53:23] "GET /static/plugins/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:53:23] "GET /static/js/ihome/status_code.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:53:23] "GET /static/js/ihome/status_code.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:53:23] "GET /static/js/ihome/register.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:53:23] "GET /static/js/ihome/register.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:53:23] "GET /static/plugins/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:53:23] "GET /static/plugins/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:53:23] "GET /static/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:53:23] "GET /static/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:53:24] "GET /api/v1/user/yzm?11 HTTP/1.1" 404 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:53:24] "GET /api/v1/user/yzm?11 HTTP/1.1" 404 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:53:40] "GET /register.html HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:53:40] "GET /register.html HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:53:49] "POST /api/v1/user/ HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:53:49] "POST /api/v1/user/ HTTP/1.1" 200 -
+INFO _internal.py:122  * Detected change in '/Users/apple/Desktop/ihome/ihome/status_code.py', reloading
+INFO _internal.py:122  * Detected change in '/Users/apple/Desktop/ihome/ihome/status_code.py', reloading
+INFO _internal.py:122  * Restarting with stat
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 199-873-912
+INFO _internal.py:122  * Debugger PIN: 199-873-912
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:55:25] "POST /api/v1/user/ HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:55:25] "POST /api/v1/user/ HTTP/1.1" 200 -
+INFO _internal.py:122  * Detected change in '/Users/apple/Desktop/ihome/ihome/status_code.py', reloading
+INFO _internal.py:122  * Detected change in '/Users/apple/Desktop/ihome/ihome/status_code.py', reloading
+INFO _internal.py:122  * Restarting with stat
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 199-873-912
+INFO _internal.py:122  * Debugger PIN: 199-873-912
+INFO _internal.py:122  * Detected change in '/Users/apple/Desktop/ihome/ihome/api_v1/user_views.py', reloading
+INFO _internal.py:122  * Detected change in '/Users/apple/Desktop/ihome/ihome/api_v1/user_views.py', reloading
+INFO _internal.py:122  * Restarting with stat
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 199-873-912
+INFO _internal.py:122  * Debugger PIN: 199-873-912
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:55:59] "POST /api/v1/user/ HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:55:59] "POST /api/v1/user/ HTTP/1.1" 200 -
+INFO _internal.py:122  * Detected change in '/Users/apple/Desktop/ihome/ihome/api_v1/user_views.py', reloading
+INFO _internal.py:122  * Detected change in '/Users/apple/Desktop/ihome/ihome/api_v1/user_views.py', reloading
+INFO _internal.py:122  * Restarting with stat
+INFO _internal.py:122  * Restarting with stat
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Restarting with stat
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 199-873-912
+INFO _internal.py:122  * Debugger PIN: 199-873-912
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:58:18] "GET /register.html HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:58:18] "GET /register.html HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:58:26] "POST /api/v1/user/ HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:58:26] "POST /api/v1/user/ HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:58:27] "POST /api/v1/user/ HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:58:27] "POST /api/v1/user/ HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:58:27] "POST /api/v1/user/ HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:58:27] "POST /api/v1/user/ HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:58:28] "POST /api/v1/user/ HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:58:28] "POST /api/v1/user/ HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:58:28] "POST /api/v1/user/ HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:58:28] "POST /api/v1/user/ HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:58:28] "POST /api/v1/user/ HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:58:28] "POST /api/v1/user/ HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:58:29] "POST /api/v1/user/ HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:58:29] "POST /api/v1/user/ HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:58:29] "POST /api/v1/user/ HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:58:29] "POST /api/v1/user/ HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:58:29] "POST /api/v1/user/ HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:58:29] "POST /api/v1/user/ HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:58:29] "POST /api/v1/user/ HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 21:58:29] "POST /api/v1/user/ HTTP/1.1" 500 -
+INFO _internal.py:122  * Detected change in '/Users/apple/Desktop/ihome/ihome/ihome.py', reloading
+INFO _internal.py:122  * Detected change in '/Users/apple/Desktop/ihome/ihome/ihome.py', reloading
+INFO _internal.py:122  * Restarting with stat
+INFO _internal.py:122  * Restarting with stat
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Restarting with stat
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 199-873-912
+INFO _internal.py:122  * Debugger PIN: 199-873-912
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Restarting with stat
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 199-873-912
+INFO _internal.py:122  * Debugger PIN: 199-873-912
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Restarting with stat
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 199-873-912
+INFO _internal.py:122  * Debugger PIN: 199-873-912
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 22:05:21] "GET /register.html HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 22:05:21] "GET /register.html HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 22:05:27] "POST /api/v1/user/ HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 22:05:27] "POST /api/v1/user/ HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 22:05:27] "GET /login.html HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 22:05:27] "GET /login.html HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 22:05:27] "GET /static/css/ihome/login.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 22:05:27] "GET /static/css/ihome/login.css HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 22:05:27] "GET /static/images/房子.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 22:05:27] "GET /static/images/房子.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 22:05:27] "GET /static/js/ihome/md5.min.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 22:05:27] "GET /static/js/ihome/md5.min.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 22:05:27] "GET /static/js/ihome/login.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 22:05:27] "GET /static/js/ihome/login.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 22:05:43] "POST /api/v1/user/session?token=b96c015560280ae11f28b00318b0efb6 HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 22:05:43] "POST /api/v1/user/session?token=b96c015560280ae11f28b00318b0efb6 HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 22:05:44] "POST /api/v1/user/session?token=b96c015560280ae11f28b00318b0efb6 HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 22:05:44] "POST /api/v1/user/session?token=b96c015560280ae11f28b00318b0efb6 HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 22:05:45] "POST /api/v1/user/session?token=b96c015560280ae11f28b00318b0efb6 HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 22:05:45] "POST /api/v1/user/session?token=b96c015560280ae11f28b00318b0efb6 HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 22:05:45] "POST /api/v1/user/session?token=b96c015560280ae11f28b00318b0efb6 HTTP/1.1" 500 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 22:05:45] "POST /api/v1/user/session?token=b96c015560280ae11f28b00318b0efb6 HTTP/1.1" 500 -
+INFO _internal.py:122  * Detected change in '/Users/apple/Desktop/ihome/ihome/ihome.py', reloading
+INFO _internal.py:122  * Detected change in '/Users/apple/Desktop/ihome/ihome/ihome.py', reloading
+INFO _internal.py:122  * Restarting with stat
+INFO _internal.py:122  * Restarting with stat
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122  * Restarting with stat
+INFO _internal.py:122  * Restarting with stat
+WARNING _internal.py:122  * Debugger is active!
+WARNING _internal.py:122  * Debugger is active!
+INFO _internal.py:122  * Debugger PIN: 199-873-912
+INFO _internal.py:122  * Debugger PIN: 199-873-912
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 22:09:37] "GET /login.html HTTP/1.1" 304 -
+INFO _internal.py:122 127.0.0.1 - - [04/Dec/2019 22:09:37] "GET /login.html HTTP/1.1" 304 -

@@ -3,11 +3,18 @@
 #1、创建app对象
 from manager import create_app
 from config import DevelopConfig
+import os
 app=create_app(DevelopConfig)
+app.secret_key = str(os.urandom(4))
 
 #2、初始化数据库
 from models import db
+a = app.config.get('SQLALCHEMY_DATABASE_URI')
+print(a)
 db.init_app(app)
+# db.create_all()
+
+
 
 #3、创建管理对象
 from flask_script import Manager
@@ -21,6 +28,8 @@ manager.add_command('db',MigrateCommand)
 #5、注册蓝图
 from html_views import html_blueprint
 app.register_blueprint(html_blueprint)
+
+
 
 from api_v1.user_views import user_blueprint
 app.register_blueprint(user_blueprint,url_prefix='/api/v1/user')

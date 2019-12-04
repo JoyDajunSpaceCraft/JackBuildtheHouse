@@ -3,8 +3,8 @@ from flask import Blueprint,jsonify,request,session
 order_blueprint=Blueprint('order',__name__)
 from datetime import datetime
 from models import House,Order
-from status_code import RET,ret_map
-from my_decorators import is_login
+# from status_code import RET,ret_map
+# from my_decorators import is_login
 import logging
 
 #查询指定编号的房屋信息
@@ -14,7 +14,7 @@ def booking_house(id):
     return jsonify(house=house.to_dict())
 
 #创建订单
-@is_login
+
 @order_blueprint.route('/',methods=['POST'])
 def booking():
     #接收参数
@@ -53,7 +53,7 @@ def booking():
     return jsonify(code=RET.OK)
 
 #作为租客查询订单
-@is_login
+
 @order_blueprint.route('/',methods=['GET'])
 def orders():
     uid=session['user_id']
@@ -62,7 +62,7 @@ def orders():
     return jsonify(olist=order_list2)
 
 #作为房东查询订单
-@is_login
+
 @order_blueprint.route('/fd',methods=['GET'])
 def lorders():
     uid=session['user_id']
