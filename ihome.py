@@ -5,7 +5,7 @@ from manager import create_app
 from config import DevelopConfig
 import os
 app=create_app(DevelopConfig)
-app.secret_key = str(os.urandom(4))
+app.secret_key = '1234'
 
 #2、初始化数据库
 from models import db

@@ -1,8 +1,8 @@
 function showSuccessMsg() {
     $('.popup_con').fadeIn('fast', function() {
         setTimeout(function(){
-            $('.popup_con').fadeOut('fast',function(){}); 
-        },1000) 
+            $('.popup_con').fadeOut('fast',function(){});
+        },1000)
     });
 }
 
@@ -14,7 +14,11 @@ $.get('/api/v1/user/auth',function (data) {
     }
 });
 
+
+
 $('#form-auth').submit(function () {
+  console.log($('#real-name').val());
+  console.log($('#id-card').val());
     $.ajax({
         url:'/api/v1/user/auth',
         type:'put',

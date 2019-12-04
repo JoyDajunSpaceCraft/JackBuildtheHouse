@@ -101,6 +101,7 @@ def user_my():
 def user_auth():
     #获取当前登录用户的编号
     user_id=session['user_id']
+    print(user_id)
     #根据编号查询当前用户
     user=User.query.get(user_id)
     #返回用户的真实姓名、身份证号
@@ -217,6 +218,7 @@ def user_login():
         #判断密码是否正确
         if user.check_pwd(password):
             session['user_id']=user.id
+            print(session['user_id'])
             return jsonify(code=RET.OK,msg=u'ok')
         else:
             return jsonify(code=RET.PARAMERR, msg=u'密码不正确')
