@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>爱家-房源</title>
+    <title>JackBuildtheHouse-房源</title>
     <link href="/static/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="/static/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="/static/css/reset.css" rel="stylesheet">
@@ -65,7 +65,7 @@
             <a href="/detail.html?id={{ house.id }}"><img src="{{ house.image }}"></a>
             <div class="house-desc">
                 <div class="landlord-pic"><img src="{{ house.avatar }}"></div>
-                <div class="house-price">￥<span>{{ house.price }}</span>/晚</div>
+                <div class="house-price">￥<span>{{ house.price }}</span>/天</div>
                 <div class="house-intro">
                     <span class="house-title">{{ house.title }}</span>
                     <em>出租{{ house.room }}间 - {{ house.order_count }}次入住 - {{ house.address }}</em>
@@ -75,7 +75,7 @@
         {{ /each }}
     </script>
     <div class="footer">
-        <p><span><i class="fa fa-copyright"></i></span>爱家租房&nbsp;&nbsp;享受家的温馨</p>
+        <p><span><i class="fa fa-copyright"></i></span>JackBuildtheHouse租房&nbsp;&nbsp;享受家的温馨</p>
     </div>
 </div>
 

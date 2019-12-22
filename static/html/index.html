@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>爱家</title>
+    <title>JackBuildtheHouse</title>
     <link href="/static/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="/static/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="/static/css/reset.css" rel="stylesheet">
@@ -25,7 +25,7 @@
             <div class="user-info fr">
                 <span><i class="fa fa-user fa-lg"></i></span>
                 <a class="user-name" href="/my.html"></a>
-                <aclass="btn btn-primary btn-lg disabled" href="javascript:logout();">退出</a>
+                <a class="btn btn-primary btn-lg disabled" href="javascript:logout();">退出</a>
             </div>
         </div>
         <div class="swiper-container">
@@ -33,10 +33,11 @@
             <script id="house_list" type="text/html">
                 {{ each hlist as house }}
                 <div class="swiper-slide">
-                    <a href="/detail.html?id={{ house.id }}"><img src="{{ house.image }}"></a>
+                    <a href="/detail.html?id={{ house.id }}">
+                      <img src="/static/images/home0{{house.id}}.jpg"></a>
                     <div class="slide-title">{{ house.title }}</div>
                 </div>
-                {{ each }}
+                {{ /each }}
             </script>
             <div class="swiper-pagination"></div>
         </div>
@@ -99,7 +100,7 @@
             </div>
         </div>
         <div class="footer">
-            <p><span><i class="fa fa-copyright"></i></span>爱家租房&nbsp;&nbsp;享受家的温馨</p>
+            <p><span><i class="fa fa-copyright"></i></span>JackBuildtheHouse租房&nbsp;&nbsp;享受家的温馨</p>
         </div>
     </div>
 
