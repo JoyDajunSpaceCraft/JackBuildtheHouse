@@ -12,7 +12,7 @@ body {
 }
 .nav-bar {
     width: 100%;
-    height: 35px; 
+    height: 35px;
     text-align: center;
     position: relative;
     border-bottom: 1px solid #eee;
@@ -24,14 +24,14 @@ body {
     font-size: 20px;
 }
 .nav-btn {
-    position: absolute; 
+    position: absolute;
     top: 0;
     left: 10px;
     color: #000;
     font-size: 16px;
 }
 .filter-title-bar {
-    height: 35px; 
+    height: 35px;
     text-align: center;
     border-bottom: 1px solid #eee;
     background-color: #fff;
@@ -45,14 +45,14 @@ body {
 .split-line {
     color: #eee;
     font-size: 26px;
-    margin-top: -2px; 
+    margin-top: -2px;
     font-weight: 100;
 }
 .filter-item {
     display: none;
 }
 .filter-item.active {
-    display: block; 
+    display: block;
 }
 .filter-date {
     margin: 10px;
@@ -69,7 +69,7 @@ body {
     float: left;
     height: 30px;
     line-height: 30px;
-    text-align: center;    
+    text-align: center;
     background-color: #fff;
     border-radius: 3px;
     font-size: 14px;
@@ -119,7 +119,7 @@ body {
     position: absolute;
     left: 10px;
     bottom: 43px;
-    border-radius: 50%; 
+    border-radius: 50%;
     overflow: hidden;
     border: 3px solid #fff;
 }
@@ -129,15 +129,18 @@ body {
     right: 0;
     bottom: 50px;
     height: 42px;
-    padding: 0 12px;
+    padding: 12px 12px;
     line-height: 42px;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
     font-size: 14px;
+    margin-top: 15px;
 }
 .house-price>span {
     font-size: 30px;
+    padding-top: 15px;
+    margin-top: 30px;
 }
 .house-intro {
     padding: 5px 10px;
@@ -149,7 +152,7 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: 14px;
-    color: #333; 
+    color: #333;
 }
 .house-intro>em {
     display: block;
@@ -159,5 +162,6 @@ body {
     text-overflow: ellipsis;
     font-style: normal;
 }
+
 
 

@@ -1,4 +1,9 @@
 # coding=utf-8
+# 和 订单有关的内容
+"""
+包括 查询指定编号的房屋信息
+    创建订单
+"""
 from flask import Blueprint, jsonify, request, session
 
 from status_code import RET, ret_map
@@ -6,8 +11,7 @@ from status_code import RET, ret_map
 order_blueprint = Blueprint('order', __name__)
 from datetime import datetime
 from models import House, Order
-# from status_code import RET,ret_map
-# from my_decorators import is_login
+
 import logging
 
 
@@ -62,6 +66,13 @@ def booking():
 
 @order_blueprint.route('/', methods=['GET'])
 def orders():
+  uid = session['user_id']
+  order_list = Order.query.filter(Order.user_id == uid).order_by(Order.id.desc())
+  order_list2 = [order.to_dict() for order in order_list]
+  return jsonify(olist=order_list2)
+
+@order_blueprint.route('/', methods=['GET'])
+def my2():
   uid = session['user_id']
   order_list = Order.query.filter(Order.user_id == uid).order_by(Order.id.desc())
   order_list2 = [order.to_dict() for order in order_list]

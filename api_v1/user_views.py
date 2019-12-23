@@ -70,19 +70,12 @@ def user_profile():
     try:
       # 获取头像文件
       f1 = request.files['avatar']
-      # print(f1)
-      # print(type(f1))
-      # from werkzeug.datastructures import FileStorage
-      # mime-type:国际规范，表示文件的类型，如text/html,text/xml,image/png,image/jpeg..
+
       if not re.match('image/.*', f1.mimetype):
         return jsonify(code=RET.PARAMERR)
     except:
       return jsonify(code=RET.PARAMERR)
-    # 上传到七牛云
-    # url = put_qiniu(f1)
 
-    # 如果未出错
-    # 保存用户的头像信息
     try:
       user = User.query.get(session['user_id'])
       f1
@@ -95,7 +88,7 @@ def user_profile():
     except:
       logging.ERROR(u'数据库访问失败')
       return jsonify(code=RET.DBERR)
-    # 则返回图片信息
+
     return jsonify(code=RET.OK,
                    url=current_app.config['QINIU_URL'] + ret.get('key'))
   elif 'name' in dict:
@@ -112,38 +105,6 @@ def user_profile():
   else:
     return jsonify(code=RET.PARAMERR, msg=ret_map[RET.PARAMERR])
 
-
-@user_blueprint.route('/auth', methods=['PUT'])
-def user_auth_set():
-  # 接收参数
-  dict = request.form
-  id_name = dict.get('id_name')
-  id_card = dict.get('id_card')
-  # 验证参数的有效性
-  if not all([id_name, id_card]):
-    return jsonify(code=RET.PARAMERR, msg=ret_map[RET.PARAMERR])
-  # 公安部证明姓名存在重复，所以不需要验证是否存在
-  # 验证身份证号合法
-  if not re.match(r'^[1-9]\d{5}(19|20)\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$', id_card):
-    return jsonify(code=RET.PARAMERR, msg=ret_map[RET.PARAMERR])
-  # 判断身份证号是否存在
-
-  # 修改数据对象
-  try:
-    user = User.query.get(session['user_id'])
-  except:
-    logging.ERROR(u'查询用户失败')
-    return jsonify(code=RET.DBERR)
-
-  try:
-    user.id_card = id_card
-    user.id_name = id_name
-    user.add_update()
-  except:
-    logging.ERROR(u'修改用户姓名、身份证号失败')
-    return jsonify(code=RET.DBERR)
-  # 返回数据
-  return jsonify(code=RET.OK)
 
 
 '''
@@ -182,7 +143,6 @@ def user_login():
     # 判断密码是否正确
     if user.check_pwd(password):
       session['user_id'] = user.id
-      print(session['user_id'])
       return jsonify(code=RET.OK, msg=u'ok')
     else:
       return jsonify(code=RET.PARAMERR, msg=u'密码不正确')

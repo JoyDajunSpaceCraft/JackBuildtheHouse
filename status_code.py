@@ -1,4 +1,5 @@
 # coding=utf-8
+# 设置后端传参 帮助验证Ajax是否success
 class RET:
     OK = "0"
     DBERR = "4001"

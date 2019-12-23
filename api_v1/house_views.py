@@ -12,26 +12,17 @@ from status_code import *
 
 # 获取地区信息，并进行缓存
 def get_areas():
-  # area_dict_list = current_app.redis.get('area_list')
-  # if not area_dict_list:
+
   area_list = Area.query.all()
   area_dict_list = [area.to_dict() for area in area_list]
-  #   current_app.redis.set('area_list', json.dumps(area_dict_list))
-  # else:
-  #   # 存储到Redis后会被转换为字符串，所以取出来后需要转换
-  #   area_dict_list = json.loads(area_dict_list)
+
   return area_dict_list
 
 
 # 获取设施信息并缓存
 def get_facilities():
-  # facility_dict_list = current_app.redis.get('facility_list')
-  # if not facility_dict_list:
   facility_list = Facility.query.all()
   facility_dict_list = [facility.to_dict() for facility in facility_list]
-  #   current_app.redis.set('facility_list', json.dumps(facility_dict_list))
-  # else:
-  #   facility_dict_list = json.loads(facility_dict_list)
   return facility_dict_list
 
 
@@ -69,7 +60,7 @@ def newhouse_image():
 
 @house_blueprint.route('/', methods=['POST'])
 def newhouse_save():
-  # 接收数据
+  # 接收数据 request 中获取表单数据方法 再将其形式转换成字典
   params = request.form.to_dict()
   facility_ids = request.form.getlist('facility')
   # 验证数据的有效性
@@ -92,8 +83,9 @@ def newhouse_save():
   # 根据设施的编号查询设施对象
   if facility_ids:
     facility_list = Facility.query.filter(Facility.id.in_(facility_ids)).all()
+    # 进行第三张表的写入
     house.facilities = facility_list
-  house.add_update()
+  house.add_update() # 提交表单
   # 返回结果
   return jsonify(code=RET.OK, house_id=house.id)
 
@@ -102,7 +94,7 @@ def newhouse_save():
 def myhouse():
   user_id = session['user_id']
   user = User.query.get(user_id)
-  if user.id_name:
+  if user:
     # 已经完成实名认证，查询当前用户的房屋信息
     house_list = House.query.filter(House.user_id == user_id).order_by(House.id.desc())
     house_list2 = []
@@ -139,8 +131,9 @@ def index():
     user_name = user.name
     code = RET.OK
   # 返回最新的5个房屋信息
-  hlist = House.query.order_by(House.id.desc())[:5]
+  hlist = House.query.order_by(House.id)[:5]
   hlist2 = [house.to_dict() for house in hlist]
+
   # 查找地区信息
   alist = get_areas()
   return jsonify(code=code, name=user_name, hlist=hlist2, alist=alist)
@@ -150,6 +143,7 @@ def index():
 def search():
   # 接收参数
   dict = request.args
+  # request.args存的都是url内的所有数据,等同于django内的request.GET
   area_id = int(dict.get('aid'))
   begin_date = dict.get('sd')
   end_date = dict.get('ed')
@@ -161,6 +155,7 @@ def search():
     hlist = hlist.filter(House.user_id != (session['user_id']))
   # 满足时间条件，当订单完成后再完成时间限制
   order_list = Order.query.filter(Order.status != 'REJECTED')
+
   # 情况一：
   # order_list1=Order.query.filter(Order.begin_date>=begin_date,Order.end_date<=end_date)
   # 情况二：

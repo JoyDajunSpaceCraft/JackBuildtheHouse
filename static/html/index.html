@@ -17,15 +17,15 @@
 <body>
     <div class="container">
         <div class="top-bar">
-            <img class="logo" src="/static/images/房子.png">
+            <img class="logo fl" src="/static/images/房子.png">
             <div class="register-login">
-                <a class="btn top-btn" href="/register.html">注册</a>
-                <a class="btn top-btn" href="/login.html">登录</a>
+                <a class="btn btn-primary btn-lg  btn top-btn logbutton" href="/register.html">注册</a>
+                <a class="btn btn btn-primary btn-lg top-btn logbutton" href="/login.html">登录</a>
             </div>
             <div class="user-info fr">
                 <span><i class="fa fa-user fa-lg"></i></span>
-                <a class="user-name" href="/my.html"></a>
-                <a class="btn btn-primary btn-lg disabled" href="javascript:logout();">退出</a>
+                <a class="user-name btn btn-primary btn-lg" href="/my.html"></a>
+                <a class="btn btn-primary btn-lg " href="javascript:logout();">退出</a>
             </div>
         </div>
         <div class="swiper-container">
@@ -34,7 +34,7 @@
                 {{ each hlist as house }}
                 <div class="swiper-slide">
                     <a href="/detail.html?id={{ house.id }}">
-                      <img src="/static/images/home0{{house.id}}.jpg"></a>
+                      <img src="/static/images/home0{{ house.id }}.jpg"></a>
                     <div class="slide-title">{{ house.title }}</div>
                 </div>
                 {{ /each }}

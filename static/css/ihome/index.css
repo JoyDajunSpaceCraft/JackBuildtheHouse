@@ -13,7 +13,13 @@ body {
 .logo {
     width: 60px;
     height: 50px;
-    margin-left: 15px;
+    margin-left: 20px;
+    margin-right: 5px;
+
+}
+.logbutton{
+  align-content: center;
+  margin-bottom:2px ;
 }
 .register-login {
     height: 30px;

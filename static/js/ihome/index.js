@@ -63,6 +63,7 @@ function logout() {
         type: 'DELETE',
         success: function (data) {
             if (data.code == RET.OK) {
+
                 $(".top-bar>.user-info").hide();
                 $(".top-bar>.register-login").show();
             }
@@ -76,11 +77,15 @@ $(document).ready(function () {
         //是否登录
         if (data.code == RET.OK) {
             $(".top-bar>.user-info").show().find('.user-name').text(data.name);
+            $(".top-bar>.register-login").hide();
+            console.log(data.code);
         } else {
             $(".top-bar>.register-login").show();
+            console.log(data.code);
         }
         //最新5个房屋
         var html = template('house_list', {hlist: data.hlist});
+        console.log(data.code);
         $('.swiper-wrapper').html(html);
         //图片播放
         var mySwiper = new Swiper('.swiper-container', {

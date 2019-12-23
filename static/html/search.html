@@ -11,6 +11,7 @@
     <link href="/static/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
     <link href="/static/css/ihome/main.css" rel="stylesheet">
     <link href="/static/css/ihome/search.css" rel="stylesheet">
+    <link href="//at.alicdn.com/t/font_1541815_slzhxm2x9lq.css" rel="stylesheet">
 </head>
 <body>
 <div class="container">
@@ -62,14 +63,17 @@
     <script id="house_list" type="text/html">
         {{ each hlist as house }}
         <li class="house-item">
-            <a href="/detail.html?id={{ house.id }}"><img src="{{ house.image }}"></a>
             <div class="house-desc">
-                <div class="landlord-pic"><img src="{{ house.avatar }}"></div>
-                <div class="house-price">￥<span>{{ house.price }}</span>/天</div>
                 <div class="house-intro">
-                    <span class="house-title">{{ house.title }}</span>
+
+                    <span class="house-title">
+                        <a class="iconfont iconcord" href="/detail.html?id={{ house.id }}"></a>
+                        {{ house.title }}</span>
                     <em>出租{{ house.room }}间 - {{ house.order_count }}次入住 - {{ house.address }}</em>
+                    ￥<span>{{ house.price }}</span>/天
+
                 </div>
+
             </div>
         </li>
         {{ /each }}

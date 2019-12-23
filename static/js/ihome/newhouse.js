@@ -24,22 +24,24 @@ $('#form-house-info').submit(function () {
             $('#house-id').val(data.house_id);
         }else{
             $('.error-msg text-center').show().find('span').html(ret_map[data.code]);
+            //显示内容
+
         }
     });
     return false;
 });
 
 //为图片表单绑定事件
-$('#form-house-image').submit(function () {
-    $(this).ajaxSubmit({
-        url: "/api/v1/house/image",
-        type: "post",
-        dataType: "json",
-        success: function (data) {
-            if (data.code == RET.OK) {
-                $('.house-image-cons').append('<img src="'+data.url+'"/>');
-            }
-        }
-    });
-    return false;
-});
+// $('#form-house-image').submit(function () {
+//     $(this).ajaxSubmit({
+//         url: "/api/v1/house/image",
+//         type: "post",
+//         dataType: "json",
+//         success: function (data) {
+//             if (data.code == RET.OK) {
+//                 $('.house-image-cons').append('<img src="'+data.url+'"/>');
+//             }
+//         }
+//     });
+//     return false;
+// });

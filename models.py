@@ -26,7 +26,7 @@ class BaseModel(object):
 
 
 class User(BaseModel, db.Model):
-  __tablename__ = 'JBKuser'
+  __tablename__ = 'ihome_user'
   id = db.Column(db.INTEGER, primary_key=True)
   phone = db.Column(db.String(11), unique=True)
   pwd_hash = db.Column(db.String(200))
@@ -67,23 +67,23 @@ class User(BaseModel, db.Model):
     }
 
 
-JBKhouse_facility = db.Table(
-  "JBKhouse_facility",
-  db.Column("house_id", db.Integer, db.ForeignKey("JBKhouse.id"), primary_key=True),  # 房屋编号
-  db.Column("facility_id", db.Integer, db.ForeignKey("JBKfacility.id"), primary_key=True)  # 设施编号
+ihome_house_facility = db.Table(
+  "ihome_house_facility",
+  db.Column("house_id", db.Integer, db.ForeignKey("ihome_house.id"), primary_key=True),  # 房屋编号
+  db.Column("facility_id", db.Integer, db.ForeignKey("ihome_facility.id"), primary_key=True)  # 设施编号
 )
 
 
 class House(BaseModel, db.Model):
   """房屋信息"""
 
-  __tablename__ = "JBKhouse"
+  __tablename__ = "ihome_house"
 
   id = db.Column(db.Integer, primary_key=True)  # 房屋编号
   # 房屋主人的用户编号
-  user_id = db.Column(db.Integer, db.ForeignKey("JBKuser.id"), nullable=False)
+  user_id = db.Column(db.Integer, db.ForeignKey("ihome_user.id"), nullable=False)
   # 归属地的区域编号
-  area_id = db.Column(db.Integer, db.ForeignKey("JBKarea.id"), nullable=False)
+  area_id = db.Column(db.Integer, db.ForeignKey("ihome_area.id"), nullable=False)
   title = db.Column(db.String(64), nullable=False)  # 标题
   price = db.Column(db.Integer, default=0)  # 单价，单位：分
   address = db.Column(db.String(512), default="")  # 地址
@@ -99,7 +99,7 @@ class House(BaseModel, db.Model):
   index_image_url = db.Column(db.String(256), default="")  # 房屋主图片的路径
 
   # 房屋的设施
-  facilities = db.relationship("Facility", secondary=JBKhouse_facility)
+  facilities = db.relationship("Facility", secondary=ihome_house_facility)
   images = db.relationship("HouseImage")  # 房屋的图片
   orders = db.relationship('Order', backref='house')
 
@@ -140,18 +140,18 @@ class House(BaseModel, db.Model):
 class HouseImage(BaseModel, db.Model):
   """房屋图片"""
 
-  __tablename__ = "JBKhouse_image"
+  __tablename__ = "ihome_house_image"
 
   id = db.Column(db.Integer, primary_key=True)
   # 房屋编号
-  house_id = db.Column(db.Integer, db.ForeignKey("JBKhouse.id"), nullable=False)
+  house_id = db.Column(db.Integer, db.ForeignKey("ihome_house.id"), nullable=False)
   url = db.Column(db.String(256), nullable=False)  # 图片的路径
 
 
 class Facility(BaseModel, db.Model):
   """设施信息"""
 
-  __tablename__ = "JBKfacility"
+  __tablename__ = "ihome_facility"
 
   id = db.Column(db.Integer, primary_key=True)  # 设施编号
   name = db.Column(db.String(32), nullable=False)  # 设施名字
@@ -171,7 +171,7 @@ class Facility(BaseModel, db.Model):
 class Area(BaseModel, db.Model):
   """城区"""
 
-  __tablename__ = "JBKarea"
+  __tablename__ = "ihome_area"
 
   id = db.Column(db.Integer, primary_key=True)  # 区域编号
   name = db.Column(db.String(32), nullable=False)  # 区域名字
@@ -185,11 +185,11 @@ class Area(BaseModel, db.Model):
 
 
 class Order(BaseModel, db.Model):
-  __tablename__ = "JBKorder"
+  __tablename__ = "ihome_order"
 
   id = db.Column(db.Integer, primary_key=True)
-  user_id = db.Column(db.Integer, db.ForeignKey("JBKuser.id"), nullable=False)
-  house_id = db.Column(db.Integer, db.ForeignKey("JBKhouse.id"), nullable=False)
+  user_id = db.Column(db.Integer, db.ForeignKey("ihome_user.id"), nullable=False)
+  house_id = db.Column(db.Integer, db.ForeignKey("ihome_house.id"), nullable=False)
   begin_date = db.Column(db.DateTime, nullable=False)
   end_date = db.Column(db.DateTime, nullable=False)
   days = db.Column(db.Integer, nullable=False)
