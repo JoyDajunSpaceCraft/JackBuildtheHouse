@@ -1,0 +1,64 @@
+数据库
+house表
+	id 自增主键 房屋编号
+	user_id  房屋主人的用户编号 外键ihome_user.id
+	area_id  归属地的区域编号 外键 ihome_area.id
+	title 标题 eg 合租·江岸水城4居室-南卧
+  price 单价，单位：元/月
+  address 地址 eg.小区距天润城站步行约841米
+  room_count 房间数目
+  acreage 房屋面积 单位 ㎡
+  unit 户型 eg.二室一厅
+  capacity 房屋容纳的人数
+  beds 房屋有几张床
+  deposit 房屋押金
+  min_days 最少入住天数
+  max_days 最多入住天数，0表示不限制
+  order_count 预订完成的该房屋的订单数
+  index_image_url 房屋主图片的路径
+		house表和order表示一对多关系 （house是一）
+		house 表和 facility表是多对多 联表为 house_facility
+		house 表和 image表是多对多 联表为 house_image
+
+user表
+	id 自增主键
+	phone 电话号码
+  pwd_hash 密码
+  name 用户名
+  avatar 图片存储
+	id_name 身份证上面的名字
+  id_card 身份证号码
+  User表与house ，order 是一对多 （user是一）
+
+house_facility 表
+	id 主键
+	house_id  房屋编号 外键 主键
+	facility_id 设施编号 外键 主键
+
+house_image 房屋图片
+  id 自增主键
+  house_id  房屋编号 外键 主键
+	url 图片的路径
+
+
+Facility 设施信息
+  id 设施编号 自增主键
+  name 设施名字
+  css 设施展示的图标
+
+Area 城区
+  id  区域编号 自增主键
+  name 区域名字
+		area 表和 house是一对多关系 （area是一）
+
+order
+  id 主键
+	user_id 外键  user.id
+  house_id 外键 house.id
+	begin_date 订单开始时间
+  end_date 订单结束时间
+  days 入住多久
+  house_price 房间价格
+  amount 总计金额 默认=house_price*（days/30）
+	status 订单状态
+
