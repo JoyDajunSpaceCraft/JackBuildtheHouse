@@ -71,6 +71,23 @@ def orders():
   order_list2 = [order.to_dict() for order in order_list]
   return jsonify(olist=order_list2)
 
+@order_blueprint.route('/<int:id>', methods=['GET'])
+def order_info(id):
+  # 查询房屋信息
+  uid = session['user_id']
+  order_list = Order.query.filter(Order.user_id == uid).order_by(Order.id.desc())
+  hid = order_list
+  house = House.query.get(id)
+  # 查询设施信息
+  facility_list = get_facilities()
+  # 判断当前房屋信息是否为当前登录的用户发布，如果是则不显示预订按钮
+  booking = 1
+  if 'user_id' in session:
+    if house.user_id == session['user_id']:
+      booking = 0
+
+  return jsonify(house=house.to_full_dict(), facility_list=facility_list, booking=booking)
+
 @order_blueprint.route('/', methods=['GET'])
 def my2():
   uid = session['user_id']
@@ -92,6 +109,7 @@ def lorders():
   # 构造结果
   olist = [order.to_dict() for order in order_list]
   return jsonify(olist=olist)
+
 
 
 # 修改状态

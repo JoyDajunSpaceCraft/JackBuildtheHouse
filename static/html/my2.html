@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
+<!--TODO 代替my.html 成为用户主界面 -->
 <head>
-    <meta charset="utf-8">
+  <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>JackBuildtheHouse-我的JackBuildtheHouse</title>
@@ -10,113 +11,90 @@
     <link href="/static/css/reset.css" rel="stylesheet">
     <link href="/static/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
     <link href="/static/css/ihome/main.css" rel="stylesheet">
-    <link href="/static/css/ihome/my2.css" rel="stylesheet">
+  <link href="/static/css/ihome/my2.css" rel="stylesheet">
+
 </head>
-
 <body>
-
 <div id="topBar">
-    <div class="area clearfix">
-        <div class="glbLeft">
-            <ul class="top_list">
-                <li class="user">
-                    <img src="" onerror="this.src='static/images/房子.png'" width="20" class="img">
-                                        JackBuildtheHouse                    <i class="line"></i>
-                    <b class="icon"></b>
-                </li>
-                <li id="logout"> <a href="#" onclick="logout();" >退出</a></li>
-            </ul>
-        </div>
+  <div class="area clearfix">
+    <div class="glbLeft">
+      <ul class="top_list">
+        <li class="user">
+          <img src="" onerror="this.src='static/images/房子.png'" width="20" class="img">
+          JackBuildtheHouse <i class="line"></i>
+          <b class="icon"></b>
+        </li>
+        <li id="logout"><a href="#" onclick="logout();">退出</a></li>
+      </ul>
     </div>
+  </div>
 </div>
 
 <div id="header">
-    <div class="area clearfix">
-        <h1 class="logo">
-            <a href="/index.html">
-                <img src="/static/images/房子.png" width="100" height="43">
-            </a>
-        </h1>
-        <div class="nav">
-            <a href="/profile.html" title="我的空间"   class="active">我的空间</a>
-        </div>
-
-        <input type="hidden" id="login_flag" value=""/>
+  <div class="area clearfix">
+    <h1 class="logo">
+      <a href="/index.html">
+        <img src="/static/images/房子.png" width="100" height="43">
+      </a>
+    </h1>
+    <div class="nav">
+      <a href="/profile.html" title="我的空间" class="active">我的空间</a>
     </div>
+
+    <input type="hidden" id="login_flag" value=""/>
+  </div>
 </div><!--/sub-header-->
 
 <div class="clearfix area mainCon">
 
-    <div class="slideLeft">
-        <ul>
-            <li class="myStore"><b></b><a href="/profile.html">个人信息</a></li>
-            <li class="myLook"><b></b><a href="/orders.html">我的订单</a></li>
-            <li class="myContract"><b></b><a href="/myhouse.html">我的房源</a></li>
-            <li class="myContract"><b></b><a href="/lorders.html">客户订单</a></li>
-        </ul>
-    </div>
-    <div class="mainRight notFrameBox">
-        <!-- 个人 -->
+  <div class="slideLeft">
+    <ul>
+      <li class="myStore"><b></b><a href="/profile.html">个人信息</a></li>
+      <li class="myLook"><b></b><a href="/orders.html">我的订单</a></li>
+      <li class="myContract"><b></b><a href="/myhouse.html">我的房源</a></li>
+      <li class="myContract"><b></b><a href="/lorders.html">客户订单</a></li>
+    </ul>
+  </div>
+  <div class="mainRight notFrameBox">
+    <!-- 个人 -->
     <div class="person clearfix">
-            <div class="photo fl">
-                    <img src="" onerror="this.src='/static/images/头像.jpg'">
-            </div>
-            <div class="information fl">
-                    <p class="p2"><a href="/profile.html">修改个人资料<i></i></a></p>
-                    <p class="p3">
-                                                        <span class="active">已绑定手机号</span>
-                            <i class="phone active"></i>
-                                                </p>
-            </div>
+      <div class="photo fl">
+        <img src="" onerror="this.src='/static/images/头像.jpg'">
+      </div>
+      <div class="information fl">
+        <p class="p2"><a href="/profile.html">修改个人资料<i></i></a></p>
+        <p class="p3">
+          <span class="active">已绑定手机号</span>
+          <i class="phone active"></i>
+        </p>
+      </div>
 
-            <div class="line fr"></div>
-            <div class="wallet fr">
-            </div>
+      <div class="line fr"></div>
+      <div class="wallet fr">
+      </div>
     </div>
 
     <!-- 履行中合同 -->
+    <!-- 为什么按照语法写了无法显示！！！TODO-->
     <div class="contract">
-            <h5>履行中合同</h5>
-                            <p class="noContent">您还没有履行中的合同，快去签约吧！</p>
-                    </div>
-
-         </div>
+      <h5>履行中合同</h5>
+      <script id="orders" type="text/html">
+          {{ if olist }}
+          <p href="/orders.html">查看我的订单</p>
+          {{ else }}
+          <p>您还没有履行中的合同，快去签约吧！</p>
+          {{ /if }}
+      </script>
+    </div>
+  </div>
 </div>
 
-
-<!--页脚-->
-<div id="footer">
-  <div class="area">
-    <div class="clearfix">
-      <div class="glbLeft">
-        <dl class="fList">
-            <dt>关于我们</dt>
-
-        </dl>
-        <dl class="fList">
-
-        </dl>
-        <dl class="fList">
-
-        </dl>
-      </div><!--/glbLeft-->
-      <div class="glbRight">
-        <div class="img">
-
-        </div>
-        <div class="img">
-
-        </div><!--/img-->
-      </div><!--/glbRight-->
-    </div><!--/clearfix-->
-
-    <div class="linksFooter">
-
-    </div>
-
-  </div><!--/area-->
-</div><!--/footer-->
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="/static/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+<script src="/static/plugins/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js"></script>
+<script src="/static/js/ihome/status_code.js"></script>
+<script src="/static/js/ihome/my2.js"></script>
 </body>
-
 </html>
 

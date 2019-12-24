@@ -198,7 +198,7 @@ class Order(BaseModel, db.Model):
   status = db.Column(
     db.Enum(
       "WAIT_ACCEPT",  # 待接单,
-      "WAIT_PAYMENT",  # 待支付
+      "WAIT_PAYMENT",  # JBK
       "PAID",  # 已支付
       "WAIT_COMMENT",  # 待评价
       "COMPLETE",  # 已完成

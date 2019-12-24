@@ -11,6 +11,7 @@
     <link href="/static/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
     <link href="/static/css/ihome/main.css" rel="stylesheet">
     <link href="/static/css/ihome/orders.css" rel="stylesheet">
+    <link href="//at.alicdn.com/t/font_1541815_slzhxm2x9lq.css" rel="stylesheet">
 </head>
 <body>
 <div class="container">
@@ -26,28 +27,38 @@
         <script id="orders_list" type="text/html">
             {{ each olist as order }}
             <li order-id={{ order.order_id }}>
+
                 <div class="order-title">
-                    <h3>订单编号：{{ order.order_id }}</h3>
+                  <a class="iconfont iconcord" href="/detail.html?id={{ order.house_id }}"></a>
+                  <h3>订单编号：{{ order.order_id }}</h3>
                     {{ if 'WAIT_COMMENT' == order.status }}
-                    <div class="fr order-operate">
-                        <button type="button" class="btn btn-success order-comment" data-toggle="modal" data-target="#comment-modal">发表评价
-                        </button>
-                    </div>
-                    {{/if}}
+                  <div class="fr order-operate">
+                    <button type="button" class="btn btn-success order-comment" data-toggle="modal"
+                            data-target="#comment-modal">
+                      发表评价
+                    </button>
+                  </div>
+                    {{ else if 'WAIT_PAYMENT' == order.status }}
+                  <div class="fr order-operate">
+                    <button type="button" class="btn btn-success order-pay" data-toggle="modal" data-target="#pay-modal">
+                      点击支付
+                    </button>
+                  </div>
+                  {{ /if }}
                 </div>
-                <div class="order-content">
-                    <img src="{{ order.image }}">
-                    <div class="order-text">
-                        <h3>{{ order.title }}</h3>
-                        <ul>
-                            <li>创建时间：{{ order.create_date }}</li>
+              <div class="order-content">
+                <img src="{{ order.image }}">
+                <div class="order-text">
+                  <h3>{{ order.title }}</h3>
+                  <ul>
+                  <li>创建时间：{{ order.create_date }}</li>
                             <li>入住日期：{{ order.begin_date }}</li>
                             <li>离开日期：{{ order.end_date }}</li>
                             <li>合计金额：￥{{ order.amount }}(共{{ order.days }}晚)</li>
                             <li>订单状态：
-                                <span>
+                                <span id="{{ order.order_id }}">
                                         {{ if 'WAIT_ACCEPT' == order.status }}
-                                            待接单
+                                  <a>待接单</a>
                                         {{ else if 'WAIT_PAYMENT' == order.status }}
                                     待支付
                                         {{ else if 'WAIT_COMMENT' == order.status }}
@@ -63,6 +74,7 @@
                             <li>我的评价： {{ order.comment }}</li>
                             {{ else if 'REJECTED' == order.status }}
                             <li>拒单原因： {{ order.comment }}</li>
+
                             {{/if}}
                         </ul>
                     </div>
@@ -85,6 +97,24 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                         <button type="button" class="btn btn-primary modal-comment">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="pay-modal" tabindex="-1" role="dialog" aria-labelledby="comment-label">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">操作提示</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>您确定支付吗？</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary modal-pay">确定支付</button>
                     </div>
                 </div>
             </div>
