@@ -28,5 +28,13 @@ $(document).ready(function () {
         if(data.booking==1){
             $(".book-house").show();
         }
+        else if(data.booking==0){
+
+          $(".change-house").show();
+        }
+        else if(data.booking==2){
+          console.log("已经提交订单用户查看房源详细信息");
+        }
     });
-})
+
+});

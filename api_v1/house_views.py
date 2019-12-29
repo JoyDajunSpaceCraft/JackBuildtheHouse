@@ -26,6 +26,8 @@ def get_facilities():
   return facility_dict_list
 
 
+
+
 @house_blueprint.route('/area_facility', methods=['GET'])
 def newhouse():
   # 查询地址
@@ -34,6 +36,15 @@ def newhouse():
   facility_dict_list = get_facilities()
   # 构造结果并返回
   return jsonify(area=area_dict_list, facility=facility_dict_list)
+
+# 房东修改房源信息 获取旧表单信息并缓存
+@house_blueprint.route('/old_form/<int:id>', methods=['GET'])
+def old_form(id):
+  house = House.query.get(id)
+  hlist = house.to_dict()
+  print(hlist)
+  return jsonify(hlist=hlist)
+
 
 
 @house_blueprint.route('/image', methods=['POST'])
@@ -89,6 +100,37 @@ def newhouse_save():
   # 返回结果
   return jsonify(code=RET.OK, house_id=house.id)
 
+@house_blueprint.route('/changehouse/<int:id>', methods=['POST'])
+def change_house(id):
+  # 接收数据 request 中获取表单数据方法 再将其形式转换成字典
+  params = request.form.to_dict()
+  facility_ids = request.form.getlist('facility')
+  # 验证数据的有效性
+
+  # 获取对象并保存
+  house = House.query.get(id)
+  house.user_id = session['user_id']
+  house.area_id = params.get('area_id')
+  house.title = params.get('title')
+  house.price = params.get('price')
+  house.address = params.get('address')
+  house.room_count = params.get('room_count')
+  house.acreage = params.get('acreage')
+  house.beds = params.get('beds')
+  house.unit = params.get('unit')
+  house.capacity = params.get('capacity')
+  house.deposit = params.get('deposit')
+  house.min_days = params.get('min_days')
+  house.max_days = params.get('max_days')
+  # 根据设施的编号查询设施对象
+  if facility_ids:
+    facility_list = Facility.query.filter(Facility.id.in_(facility_ids)).all()
+    # 进行第三张表的写入
+    house.facilities = facility_list
+  house.add_update() # 提交表单
+  # 返回结果
+  return jsonify(code=RET.OK, house_id=house.id)
+
 
 @house_blueprint.route('/', methods=['GET'])
 def myhouse():
@@ -110,13 +152,19 @@ def myhouse():
 def house_detail(id):
   # 查询房屋信息
   house = House.query.get(id)
+  order = Order.query.filter(Order.house_id==house.id,Order.user_id==session['user_id'])
+
   # 查询设施信息
   facility_list = get_facilities()
-  # 判断当前房屋信息是否为当前登录的用户发布，如果是则不显示预订按钮
+
   booking = 1
   if 'user_id' in session:
+    # 判断当前房屋信息是否为当前登录的用户发布，如果是则不显示预订按钮
     if house.user_id == session['user_id']:
       booking = 0
+    # 判断当前房屋信息是否为当前登录已经预定信息，如果是则不显示按钮
+    elif order:
+      booking = 2
 
   return jsonify(house=house.to_full_dict(), facility_list=facility_list, booking=booking)
 

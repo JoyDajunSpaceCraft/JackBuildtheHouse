@@ -1,6 +1,6 @@
 # coding=utf-8
 from flask import Blueprint, make_response, jsonify, request, session, current_app
-
+from qiniu_sdk import put_qiniu
 user_blueprint = Blueprint('user', __name__)
 
 # from captcha.captcha import captcha
@@ -63,47 +63,60 @@ def user_auth():
   return jsonify(user.to_auth_dict())
 
 
-@user_blueprint.route('/', methods=['PUT'])
+@user_blueprint.route('/', methods=['POST','PUT'])
 def user_profile():
   dict = request.form
-  if 'avatar1' in dict:
+  if request.method == 'POST':
+    # todo 1获取前端数据
     try:
-      # 获取头像文件
-      f1 = request.files['avatar']
-
-      if not re.match('image/.*', f1.mimetype):
-        return jsonify(code=RET.PARAMERR)
-    except:
-      return jsonify(code=RET.PARAMERR)
-
+      data = request.files.get('avatar1').read()
+      print(data)
+    except Exception as e:
+      return jsonify(errmsg='获取前端数据错误')
+    # todo 2使用自定义的上传文件系统，上传图片服务器
     try:
-      user = User.query.get(session['user_id'])
-      f1
-      img = f.read()
-      f.close()
-      user.avatar = img
+      # filename = put_qiniu(data)
+      pass
+    except Exception as e:
+      return jsonify(errmsg='上传失败', errcode=RET.UNKOWNERR)
+  return 'ok'
 
-      print(f1.read())
-      user.add_update()
-    except:
-      logging.ERROR(u'数据库访问失败')
-      return jsonify(code=RET.DBERR)
-
-    return jsonify(code=RET.OK,
-                   url=current_app.config['QINIU_URL'] + ret.get('key'))
-  elif 'name' in dict:
-    # 修改用户名
-    name = dict.get('name')
-    # 判断用户名是否存在
-    if User.query.filter_by(name=name).count():
-      return jsonify(code=RET.DATAEXIST)
-    else:
-      user = User.query.get(session['user_id'])
-      user.name = name
-      user.add_update()
-      return jsonify(code=RET.OK)
-  else:
-    return jsonify(code=RET.PARAMERR, msg=ret_map[RET.PARAMERR])
+  # if 'avatar1' in dict:
+  #   try:
+  #     # 获取头像文件
+  #     f1 = request.files['avatar']
+  #     # print(f1)
+  #     # print(type(f1))
+  #     # from werkzeug.datastructures import FileStorage
+  #     # mime-type:国际规范，表示文件的类型，如text/html,text/xml,image/png,image/jpeg..
+  #     if not re.match('image/.*', f1.mimetype):
+  #       return jsonify(code=RET.PARAMERR)
+  #   except:
+  #     return jsonify(code=RET.PARAMERR)
+  #   # 上传到七牛云
+  #   url = put_qiniu(f1)
+  #   # 如果未出错
+  #   # 保存用户的头像信息
+  #   try:
+  #     user = User.query.get(session['user_id'])
+  #     user.avatar = url
+  #     user.add_update()
+  #   except:
+  #     logging.ERROR(u'数据库访问失败')
+  #     return jsonify(code=RET.DBERR)
+  # elif 'name' in dict:
+  #   # 修改用户名
+  #   name = dict.get('name')
+  #   # 判断用户名是否存在
+  #   if User.query.filter_by(name=name).count():
+  #     return jsonify(code=RET.DATAEXIST)
+  #   else:
+  #     user = User.query.get(session['user_id'])
+  #     user.name = name
+  #     user.add_update()
+  #     return jsonify(code=RET.OK)
+  # else:
+  #   return jsonify(code=RET.PARAMERR, msg=ret_map[RET.PARAMERR])
 
 
 

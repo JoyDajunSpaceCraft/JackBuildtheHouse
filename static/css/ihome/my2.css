@@ -63,13 +63,11 @@
   background-position: 0 -334px;
 }
 
-/*鎴戠殑绾︾湅*/
 
 .slideLeft li.myContract b {
   background-position: 0 -352px;
 }
 
-/*鎴戠殑鍚堝悓*/
 
 .slideLeft li.myChange b {
   background-position: 0 -370px;
@@ -918,4 +916,10 @@
   display: inline-block;
   margin: 0 5px;
 }
+. menu-title{
+    background-color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 1px solid #eee;
+    padding: 10px 15px;}
 

@@ -21,7 +21,7 @@ $(document).ready(function() {
             $("#mobile-err span").html("请填写正确的手机号！");
             $("#mobile-err").show();
             return;
-        } 
+        }
         if (!passwd) {
             $("#password-err span").html("请填写密码!");
             $("#password-err").show();
@@ -32,7 +32,8 @@ $(document).ready(function() {
             $(this).serialize(),
             function (data) {
             if(data.code==RET.OK){
-                location.href='my.html';
+                // location.href='my.html';
+                location.href='my2.html';
             }else{
                 $('#result-err').show().find('span').html(data.msg);
             }

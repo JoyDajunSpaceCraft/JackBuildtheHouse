@@ -16,13 +16,16 @@ class BaseModel(object):
   create_time = db.Column(db.DATETIME, default=datetime.now())
   update_time = db.Column(db.DATETIME, default=datetime.now(), onupdate=datetime.now())
 
+  # 数据库增和改操作
   def add_update(self):
+
     db.session.add(self)
     db.session.commit()
 
   def delete(self):
     db.session.delete(self)
     db.session.commit()
+
 
 
 class User(BaseModel, db.Model):
@@ -32,8 +35,6 @@ class User(BaseModel, db.Model):
   pwd_hash = db.Column(db.String(200))
   name = db.Column(db.String(30), unique=True)
   avatar = db.Column(db.String(100))
-  id_name = db.Column(db.String(30))
-  id_card = db.Column(db.String(18), unique=True)
 
   houses = db.relationship('House', backref='user')
   orders = db.relationship('Order', backref='user')
@@ -55,7 +56,8 @@ class User(BaseModel, db.Model):
   def to_basic_dict(self):
     return {
       'id': self.id,
-      'avatar': current_app.config['QINIU_URL'] + self.avatar if self.avatar else '',
+      # 'avatar': current_app.config['QINIU_URL'] + self.avatar if self.avatar else '',
+      'avatar': self.avatar if self.avatar else '',
       'name': self.name,
       'phone': self.phone
     }
@@ -110,9 +112,12 @@ class House(BaseModel, db.Model):
       'image': self.index_image_url if self.index_image_url else '',
       'area': self.area.name,
       'price': self.price,
+      'acreage':self.acreage,
       'create_time': self.create_time.strftime('%Y-%m-%d %H:%M:%S'),
-      'avatar': current_app.config['QINIU_URL'] + self.user.avatar if self.user.avatar else '',
+      'avatar': self.user.avatar if self.user.avatar else '',
       'room': self.room_count,
+      'beds':self.beds,
+      'deposit':self.deposit,
       'order_count': self.order_count,
       'address': self.address
     }
@@ -120,7 +125,7 @@ class House(BaseModel, db.Model):
   def to_full_dict(self):
     return {
       'id': self.id,
-      'user_avatar': current_app.config['QINIU_URL'] + self.user.avatar if self.user.avatar else '',
+      'user_avatar': self.user.avatar if self.user.avatar else '',
       'user_name': self.user.name,
       'price': self.price,
       'address': self.area.name + self.address,
@@ -212,6 +217,7 @@ class Order(BaseModel, db.Model):
     return {
       'order_id': self.id,
       'house_title': self.house.title,
+      'house_id': self.house_id,
       'image':  self.house.index_image_url if self.house.index_image_url else '',
       'create_date': self.create_time.strftime('%Y-%m-%d'),
       'begin_date': self.begin_date.strftime('%Y-%m-%d'),
@@ -221,6 +227,12 @@ class Order(BaseModel, db.Model):
       'status': self.status,
       'comment': self.comment
     }
+
+from faker import Factory, Faker
+fake = Faker('zh_CN')
+# 生成假数据
+def forgo(count):
+  db.drop_all()
 
 
 if __name__ == '__main__':

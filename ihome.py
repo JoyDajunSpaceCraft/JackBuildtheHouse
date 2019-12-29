@@ -3,6 +3,8 @@
 #1、创建app对象
 from manager import create_app
 from config import DevelopConfig
+from flask_wtf.csrf import CSRFError
+
 import os
 app=create_app(DevelopConfig)
 app.secret_key = '1234'
@@ -10,7 +12,6 @@ app.secret_key = '1234'
 #2、初始化数据库
 from models import db
 a = app.config.get('SQLALCHEMY_DATABASE_URI')
-print(a)
 db.init_app(app)
 # db.create_all()
 

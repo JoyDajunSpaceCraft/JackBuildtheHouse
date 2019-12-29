@@ -28,6 +28,7 @@ $('#form-avatar').submit(function () {
         success: function (data) {
             if (data.code == RET.OK) {
                 $('#user-avatar').attr('src',data.url);
+
             } else {
                 $('#error_msg1').show();
             }

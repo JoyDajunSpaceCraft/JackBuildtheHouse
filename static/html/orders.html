@@ -29,8 +29,8 @@
             <li order-id={{ order.order_id }}>
 
                 <div class="order-title">
-                  <a class="iconfont iconcord" href="/detail.html?id={{ order.house_id }}"></a>
-                  <h3>订单编号：{{ order.order_id }}</h3>
+                  <a href="/detail.html?id={{ order.house_id }}">
+                  <h3>订单编号：{{ order.order_id }}</h3></a>
                     {{ if 'WAIT_COMMENT' == order.status }}
                   <div class="fr order-operate">
                     <button type="button" class="btn btn-success order-comment" data-toggle="modal"
@@ -58,7 +58,7 @@
                             <li>订单状态：
                                 <span id="{{ order.order_id }}">
                                         {{ if 'WAIT_ACCEPT' == order.status }}
-                                  <a>待接单</a>
+                                  待接单
                                         {{ else if 'WAIT_PAYMENT' == order.status }}
                                     待支付
                                         {{ else if 'WAIT_COMMENT' == order.status }}
