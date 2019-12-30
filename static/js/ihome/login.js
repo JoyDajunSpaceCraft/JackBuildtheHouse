@@ -31,8 +31,8 @@ $(document).ready(function() {
         $.post('/api/v1/user/session?token='+TOKEN,
             $(this).serialize(),
             function (data) {
-            if(data.code==RET.OK){
-                // location.href='my.html';
+            if(data.code==MESSAGE.OK){
+                // location.href='my2.html';
                 location.href='my2.html';
             }else{
                 $('#result-err').show().find('span').html(data.msg);

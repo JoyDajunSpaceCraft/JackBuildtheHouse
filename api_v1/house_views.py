@@ -3,19 +3,15 @@ from flask import Blueprint, jsonify, current_app, request, session
 
 house_blueprint = Blueprint('house', __name__)
 
-from models import Area, Facility, House, HouseImage, User, Order
-import json
+from models import Area, Facility, House, User, Order
 from status_code import *
 
 
-# from qiniu_sdk import put_qiniu
 
 # 获取地区信息，并进行缓存
 def get_areas():
-
   area_list = Area.query.all()
   area_dict_list = [area.to_dict() for area in area_list]
-
   return area_dict_list
 
 
@@ -47,26 +43,28 @@ def old_form(id):
 
 
 
-@house_blueprint.route('/image', methods=['POST'])
-def newhouse_image():
-  # 接收房屋编号
-  house_id = request.form.get('house_id')
-  # 接收图片信息
-  f1 = request.files.get('house_image')
-  # 保存到七牛云
-  # url=put_qiniu(f1)
-  # 保存图片对象
-  image = HouseImage()
-  image.house_id = house_id
-  # image.url=url
-  image.add_update()
-  # 房屋的默认图片
-  house = House.query.get(house_id)
-  if not house.index_image_url:
-    # house.index_image_url=url
-    house.add_update()
-  # 返回图片信息
-  return jsonify(code=RET.OK, url= url)
+
+
+# @house_blueprint.route('/image', methods=['POST'])
+# def newhouse_image():
+#   # 接收房屋编号
+#   house_id = request.form.get('house_id')
+#   # 接收图片信息
+#   f1 = request.files.get('house_image')
+#   # 保存到七牛云
+#   # url=put_qiniu(f1)
+#   # 保存图片对象
+#   image = HouseImage()
+#   image.house_id = house_id
+#   # image.url=url
+#   image.add_update()
+#   # 房屋的默认图片
+#   house = House.query.get(house_id)
+#   if not house.index_image_url:
+#     # house.index_image_url=url
+#     house.add_update()
+#   # 返回图片信息
+#   return jsonify(code=MESSAGE.OK, url= url)
 
 
 @house_blueprint.route('/', methods=['POST'])
@@ -98,8 +96,9 @@ def newhouse_save():
     house.facilities = facility_list
   house.add_update() # 提交表单
   # 返回结果
-  return jsonify(code=RET.OK, house_id=house.id)
+  return jsonify(code=MESSAGE.OK, house_id=house.id)
 
+# 房东的user_id 作为house表中的user_id存储
 @house_blueprint.route('/changehouse/<int:id>', methods=['POST'])
 def change_house(id):
   # 接收数据 request 中获取表单数据方法 再将其形式转换成字典
@@ -129,7 +128,7 @@ def change_house(id):
     house.facilities = facility_list
   house.add_update() # 提交表单
   # 返回结果
-  return jsonify(code=RET.OK, house_id=house.id)
+  return jsonify(code=MESSAGE.OK, house_id=house.id)
 
 
 @house_blueprint.route('/', methods=['GET'])
@@ -142,29 +141,29 @@ def myhouse():
     house_list2 = []
     for house in house_list:
       house_list2.append(house.to_dict())
-    return jsonify(code=RET.OK, hlist=house_list2)
+    return jsonify(code=MESSAGE.OK, hlist=house_list2)
   else:
     # 没有完成实名认证
-    return jsonify(code=RET.USERERR)
+    return jsonify(code=MESSAGE.USERERR)
 
 
 @house_blueprint.route('/<int:id>', methods=['GET'])
 def house_detail(id):
   # 查询房屋信息
   house = House.query.get(id)
-  order = Order.query.filter(Order.house_id==house.id,Order.user_id==session['user_id'])
+  order = Order.query.filter(Order.house_id==house.id,Order.user_id==session['user_id']).all()
 
   # 查询设施信息
   facility_list = get_facilities()
 
   booking = 1
-  if 'user_id' in session:
+  if order!=None:
+    booking = 2
+  if 'user_id' in session and order==None:
     # 判断当前房屋信息是否为当前登录的用户发布，如果是则不显示预订按钮
     if house.user_id == session['user_id']:
       booking = 0
     # 判断当前房屋信息是否为当前登录已经预定信息，如果是则不显示按钮
-    elif order:
-      booking = 2
 
   return jsonify(house=house.to_full_dict(), facility_list=facility_list, booking=booking)
 
@@ -172,13 +171,13 @@ def house_detail(id):
 @house_blueprint.route('/index', methods=['GET'])
 def index():
   # 查找是否登录
-  code = RET.DATAERR
+  code = MESSAGE.DATAERR
   user_name = ''
   if 'user_id' in session:
     user = User.query.filter_by(id=session['user_id']).first()
     user_name = user.name
-    code = RET.OK
-  # 返回最新的5个房屋信息
+    code = MESSAGE.OK
+  # 返回图片id
   hlist = House.query.order_by(House.id)[:5]
   hlist2 = [house.to_dict() for house in hlist]
 

@@ -28,7 +28,7 @@ body {
     text-align: center;
     position: relative;
     border-bottom: 1px solid darkgrey;
-    background-color: darkgrey;
+    /*background-color: darkgrey;*/
 }
 .page-title {
     display: block;
@@ -54,7 +54,7 @@ body {
     margin-bottom: 10px;
 }
 .menu-title {
-    background-color: grey;
+    /*background-color: grey;*/
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-bottom: 1px solid darkgrey;

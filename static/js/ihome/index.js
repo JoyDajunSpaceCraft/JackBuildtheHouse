@@ -62,8 +62,7 @@ function logout() {
         url: '/api/v1/user/session',
         type: 'DELETE',
         success: function (data) {
-            if (data.code == RET.OK) {
-
+            if (data.code == MESSAGE.OK) {
                 $(".top-bar>.user-info").hide();
                 $(".top-bar>.register-login").show();
             }
@@ -75,7 +74,7 @@ $(document).ready(function () {
     //请求，获取是否登录、最新的5个房屋、地区信息
     $.get('/api/v1/house/index', function (data) {
         //是否登录
-        if (data.code == RET.OK) {
+        if (data.code == MESSAGE.OK) {
             $(".top-bar>.user-info").show().find('.user-name').text(data.name);
             $(".top-bar>.register-login").hide();
             console.log(data.code);

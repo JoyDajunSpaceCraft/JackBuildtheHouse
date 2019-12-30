@@ -20,7 +20,7 @@
   float: right;
   width: 1200px;
   min-height: 500px;
-  padding: 0 40px;
+  padding: 0 20px;
   border: solid 1px purple;
 }
 
@@ -33,7 +33,6 @@
 
 .slideLeft ul {
   padding: 10px 0;
-  padding-left: 30px;
   margin: 0 20px;
 }
 
@@ -45,7 +44,7 @@
 .slideLeft li a {
   display: block;
   padding-left: 25px;
-  font-size: 14px;
+  font-size: 20px;
   color: #666;
 }
 
@@ -798,7 +797,7 @@
 }
 
 #header .logo {
-  padding: 20px 0;
+  padding: 10px 0;
   float: left;
   margin-right: 30px;
 }

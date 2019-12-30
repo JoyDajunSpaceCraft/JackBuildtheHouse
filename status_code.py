@@ -1,6 +1,6 @@
 # coding=utf-8
 # 设置后端传参 帮助验证Ajax是否success
-class RET:
+class MESSAGE:
     OK = "0"
     DBERR = "4001"
     NODATA = "4002"
@@ -20,21 +20,21 @@ class RET:
     UNKOWNERR = "4501"
 
 ret_map = {
-    RET.OK: u"成功",
-    RET.DBERR: u"数据库错误",
-    RET.NODATA: u"无数据",
-    RET.DATAEXIST: u"数据已存在",
-    RET.DATAERR: u"数据错误",
-    RET.SESSIONERR: u"用户未登录",
-    RET.LOGINERR: u"用户登录失败",
-    RET.PARAMERR: u"参数错误",
-    RET.USERERR: u"用户不存在或未激活",
-    RET.ROLEERR: u"用户身份错误",
-    RET.PWDERR: u"密码错误",
-    RET.REQERR: u"非法请求或请求次数受限",
-    RET.IPERR: u"IP受限",
-    RET.THIRDERR: u"第三方系统错误",
-    RET.IOERR: u"文件读写错误",
-    RET.SERVERERR: u"内部错误",
-    RET.UNKOWNERR: u"未知错误",
+    MESSAGE.OK: u"成功",
+    MESSAGE.DBERR: u"数据库错误",
+    MESSAGE.NODATA: u"无数据",
+    MESSAGE.DATAEXIST: u"数据已存在",
+    MESSAGE.DATAERR: u"数据错误",
+    MESSAGE.SESSIONERR: u"用户未登录",
+    MESSAGE.LOGINERR: u"用户登录失败",
+    MESSAGE.PARAMERR: u"参数错误",
+    MESSAGE.USERERR: u"用户不存在或未激活",
+    MESSAGE.ROLEERR: u"用户身份错误",
+    MESSAGE.PWDERR: u"密码错误",
+    MESSAGE.REQERR: u"非法请求或请求次数受限",
+    MESSAGE.IPERR: u"IP受限",
+    MESSAGE.THIRDERR: u"第三方系统错误",
+    MESSAGE.IOERR: u"文件读写错误",
+    MESSAGE.SERVERERR: u"内部错误",
+    MESSAGE.UNKOWNERR: u"未知错误",
 }

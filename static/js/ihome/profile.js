@@ -26,7 +26,7 @@ $('#form-avatar').submit(function () {
         type: "put",
         dataType: "json",
         success: function (data) {
-            if (data.code == RET.OK) {
+            if (data.code == MESSAGE.OK) {
                 $('#user-avatar').attr('src',data.url);
 
             } else {
@@ -44,8 +44,8 @@ $('#form-name').submit(function () {
         type:'put',
         data:{'name':$('#user-name').val()},
         success:function (data) {
-            if(data.code==RET.OK){
-                //
+            if(data.code==MESSAGE.OK){
+
             }else{
                 $('#error_msg2').show();
             }

@@ -18,7 +18,7 @@ $('#form-house-info').submit(function () {
     $('.error-msg text-center').hide();
     //验证内容是否填写
     $.post('/api/v1/house/',$(this).serialize(),function (data) {
-        if(data.code==RET.OK){
+        if(data.code==MESSAGE.OK){
             $('#form-house-info').hide();
             $('#form-house-image').show();
             $('#house-id').val(data.house_id);
@@ -38,7 +38,7 @@ $('#form-house-info').submit(function () {
 //         type: "post",
 //         dataType: "json",
 //         success: function (data) {
-//             if (data.code == RET.OK) {
+//             if (data.code == MESSAGE.OK) {
 //                 $('.house-image-cons').append('<img src="'+data.url+'"/>');
 //             }
 //         }

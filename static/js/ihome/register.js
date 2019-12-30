@@ -49,7 +49,7 @@ function sendSMSCode() {
     $.get('/api/v1/user/send_sms',
         {'mobile':mobile,'imageCode':imageCode},
         function (data) {
-            if(data.code!=RET.OK){
+            if(data.code!=MESSAGE.OK){
                 $('#phone-code-err').show().find('span').html(data.msg);
                 $(".phonecode-a").attr("onclick", "sendSMSCode();");
             }
@@ -83,7 +83,7 @@ $(document).ready(function() {
         $.post('/api/v1/user/',
             $(this).serialize(),//表单序列化{name:value,name:value,...}
             function (data) {
-                if(data.code==RET.OK){
+                if(data.code==MESSAGE.OK){
                     location.href='/login.html';
                 }else{
                     $('#result-err').show().find('span').html(data.msg);

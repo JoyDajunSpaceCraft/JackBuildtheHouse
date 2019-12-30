@@ -27,7 +27,7 @@ $('#form-auth').submit(function () {
             id_card:$('#id-card').val()
         },
         success:function (data) {
-            if(data.code==RET.OK){
+            if(data.code==MESSAGE.OK){
                 $('.btn-success').hide();
                 showSuccessMsg();
             }else{

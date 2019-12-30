@@ -1,4 +1,4 @@
-RET = {
+MESSAGE = {
     OK: "0",
     DBERR: "4001",
     NODATA: "4002",

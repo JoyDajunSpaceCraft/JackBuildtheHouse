@@ -56,7 +56,7 @@ $(document).ready(function () {
     //提交订单
     $('.submit-btn').click(function () {
         //获取房屋id
-        var hid = decodeQuery()['id']
+        var hid = decodeQuery()['id'];
         //获取入住时间
         var startDate = $("#start-date").val();
         var endDate = $("#end-date").val();
@@ -66,7 +66,7 @@ $(document).ready(function () {
             start_date:startDate,
             end_date:endDate
         },function (data) {
-            if(data.code==RET.OK){
+            if(data.code==MESSAGE.OK){
                 location.href='/orders.html';
             }else{
                 $('.popup_con p').html(ret_map[data.code]);
@@ -74,4 +74,4 @@ $(document).ready(function () {
             }
         });
     });
-})
+});

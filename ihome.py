@@ -48,7 +48,7 @@ app.register_blueprint(order_blueprint,url_prefix='/api/v1/order')
 # def check_token():
 #     if request.path.startswith('/api'):
 #         if 'token' not in request.args or request.args.get('token')!=current_app.config['TOKEN']:
-#             return jsonify(code=RET.REQERR)
+#             return jsonify(code=MESSAGE.REQERR)
 
 if __name__ == '__main__':
     manager.run()

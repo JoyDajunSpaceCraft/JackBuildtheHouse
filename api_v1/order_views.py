@@ -6,7 +6,8 @@
 """
 from flask import Blueprint, jsonify, request, session
 
-from status_code import RET, ret_map
+from house_views import get_facilities
+from status_code import MESSAGE, ret_map
 
 order_blueprint = Blueprint('order', __name__)
 from datetime import datetime
@@ -33,15 +34,16 @@ def booking():
   end_date = datetime.strptime(dict.get('end_date'), '%Y-%m-%d')
   # 验证有效性
   if not all([house_id, start_date, end_date]):
-    return jsonify(code=RET.PARAMERR, msg=ret_map[RET.PARAMERR])
+
+    return jsonify(code=MESSAGE.PARAMERR, msg=ret_map[MESSAGE.PARAMERR])
   if start_date > end_date:
-    return jsonify(code=RET.PARAMERR, msg=ret_map[RET.PARAMERR])
+    return jsonify(code=MESSAGE.PARAMERR, msg=ret_map[MESSAGE.PARAMERR])
   # 查询房屋对象
   try:
     house = House.query.get(house_id)
   except:
     logging.error(u'下订单-查询房屋出错，房屋编号%d' % house_id)
-    return jsonify(code=RET.DBERR, msg=ret_map[RET.DBERR])
+    return jsonify(code=MESSAGE.DBERR, msg=ret_map[MESSAGE.DBERR])
   # 创建订单对象
   order = Order()
   order.user_id = session['user_id']
@@ -56,26 +58,27 @@ def booking():
     order.add_update()
   except:
     logging.error(u'下订单-出错')
-    return jsonify(code=RET.DBERR, msg=ret_map[RET.DBERR])
+
+    return jsonify(code=MESSAGE.DBERR, msg=ret_map[MESSAGE.DBERR])
 
   # 返回信息
-  return jsonify(code=RET.OK)
+  return jsonify(code=MESSAGE.OK)
 
 
 # 作为租客查询订单
 
 @order_blueprint.route('/', methods=['GET'])
 def orders():
-  uid = session['user_id']
-  order_list = Order.query.filter(Order.user_id == uid).order_by(Order.id.desc())
+  user_id = session['user_id']
+  order_list = Order.query.filter(Order.user_id == user_id).order_by(Order.id.desc())
   order_list2 = [order.to_dict() for order in order_list]
   return jsonify(olist=order_list2)
 
 @order_blueprint.route('/<int:id>', methods=['GET'])
 def order_info(id):
   # 查询房屋信息
-  uid = session['user_id']
-  order_list = Order.query.filter(Order.user_id == uid).order_by(Order.id.desc())
+  user_id = session['user_id']
+  order_list = Order.query.filter(Order.user_id == user_id).order_by(Order.id.desc())
   hid = order_list
   house = House.query.get(id)
   # 查询设施信息
@@ -90,19 +93,19 @@ def order_info(id):
 
 @order_blueprint.route('/', methods=['GET'])
 def my2():
-  uid = session['user_id']
-  order_list = Order.query.filter(Order.user_id == uid).order_by(Order.id.desc())
+  user_id = session['user_id']
+  order_list = Order.query.filter(Order.user_id == user_id).order_by(Order.id.desc())
   order_list2 = [order.to_dict() for order in order_list]
   return jsonify(olist=order_list2)
 
 
 # 作为房东查询订单
-
+# 房东的user_id 和 租客的 user_id 都是通过user表存储的
 @order_blueprint.route('/fd', methods=['GET'])
-def lorders():
-  uid = session['user_id']
+def lorders_for_user():
+  user_id = session['user_id']
   # 查询当前用户的所有房屋编号
-  hlist = House.query.filter(House.user_id == uid)
+  hlist = House.query.filter(House.user_id == user_id)
   hid_list = [house.id for house in hlist]
   # 根据房屋编号查找订单
   order_list = Order.query.filter(Order.house_id.in_(hid_list)).order_by(Order.id.desc())
@@ -114,7 +117,7 @@ def lorders():
 
 # 修改状态
 @order_blueprint.route('/<int:id>', methods=['PUT'])
-def status(id):
+def status_for_id(id):
   # 接收参数：状态
   status = request.form.get('status')
   # 查找订单对象
@@ -127,4 +130,6 @@ def status(id):
   # 保存
   order.add_update()
 
-  return jsonify(code=RET.OK)
+  return jsonify(code=MESSAGE.OK)
+
+

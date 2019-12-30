@@ -3,8 +3,6 @@ from flask import Blueprint, make_response, jsonify, request, session, current_a
 from qiniu_sdk import put_qiniu
 user_blueprint = Blueprint('user', __name__)
 
-# from captcha.captcha import captcha
-# from ytx_sdk.ytx_send import sendTemplateSMS
 from status_code import *
 import re
 from models import User
@@ -15,19 +13,17 @@ def user_register():
   # 接收参数
   dict = request.form
   mobile = dict.get('mobile')
-  # imagecode=dict.get('imagecode')
-  # phonecode=dict.get('phonecode')
   password = dict.get('password')
   password2 = dict.get('password2')
   # 验证参数是否存在
   if not all([mobile, password, password2]):
-    return jsonify(code=RET.PARAMERR, msg=ret_map[RET.PARAMERR])
+    return jsonify(code=MESSAGE.PARAMERR, msg=ret_map[MESSAGE.PARAMERR])
 
   if not re.match(r'^1[34578]\d{9}$', mobile):
-    return jsonify(code=RET.PARAMERR, msg=u'手机号格式错误')
+    return jsonify(code=MESSAGE.PARAMERR, msg=u'手机号格式错误')
   # 验证手机号是否存在
   if User.query.filter_by(phone=mobile).count():
-    return jsonify(code=RET.PARAMERR, msg=u'手机号存在')
+    return jsonify(code=MESSAGE.PARAMERR, msg=u'手机号存在')
   # 保存用户对象
   user = User()
   user.phone = mobile
@@ -36,10 +32,10 @@ def user_register():
 
   try:
     user.add_update()
-    return jsonify(code=RET.OK, msg=ret_map[RET.OK])
+    return jsonify(code=MESSAGE.OK, msg=ret_map[MESSAGE.OK])
   except:
     logging.ERROR(u'用户注册更新数据库失败，手机号：%s，密码：%s' % (mobile, password))
-    return jsonify(code=RET.DBERR, msg=ret_map[RET.DBERR])
+    return jsonify(code=MESSAGE.DBERR, msg=ret_map[MESSAGE.DBERR])
 
 
 @user_blueprint.route('/', methods=['GET'])
@@ -66,20 +62,33 @@ def user_auth():
 @user_blueprint.route('/', methods=['POST','PUT'])
 def user_profile():
   dict = request.form
-  if request.method == 'POST':
-    # todo 1获取前端数据
-    try:
-      data = request.files.get('avatar1').read()
-      print(data)
-    except Exception as e:
-      return jsonify(errmsg='获取前端数据错误')
-    # todo 2使用自定义的上传文件系统，上传图片服务器
-    try:
-      # filename = put_qiniu(data)
-      pass
-    except Exception as e:
-      return jsonify(errmsg='上传失败', errcode=RET.UNKOWNERR)
-  return 'ok'
+  # if request.method == 'POST':
+  #   # todo 1获取前端数据
+  #   try:
+  #     data = request.files.get('avatar1').read()
+  #     print(data)
+  #   except Exception as e:
+  #     return jsonify(errmsg='获取前端数据错误')
+  #   # todo 2使用自定义的上传文件系统，上传图片服务器
+  #   try:
+  #     # filename = put_qiniu(data)
+  #     pass
+  #   except Exception as e:
+  #     return jsonify(errmsg='上传失败', errcode=MESSAGE.UNKOWNERR)
+  if 'name' in dict:
+    # 修改用户名
+
+    name = dict.get('name')
+    # 判断用户名是否存在
+    if User.query.filter_by(name=name).count():
+      return jsonify(code=MESSAGE.DATAEXIST)
+    else:
+      user = User.query.get(session['user_id'])
+      user.name = name
+      user.add_update()
+      return jsonify(code=MESSAGE.OK)
+  else:
+    return jsonify(code=MESSAGE.PARAMERR, msg=ret_map[MESSAGE.PARAMERR])
 
   # if 'avatar1' in dict:
   #   try:
@@ -90,9 +99,9 @@ def user_profile():
   #     # from werkzeug.datastructures import FileStorage
   #     # mime-type:国际规范，表示文件的类型，如text/html,text/xml,image/png,image/jpeg..
   #     if not re.match('image/.*', f1.mimetype):
-  #       return jsonify(code=RET.PARAMERR)
+  #       return jsonify(code=MESSAGE.PARAMERR)
   #   except:
-  #     return jsonify(code=RET.PARAMERR)
+  #     return jsonify(code=MESSAGE.PARAMERR)
   #   # 上传到七牛云
   #   url = put_qiniu(f1)
   #   # 如果未出错
@@ -103,20 +112,20 @@ def user_profile():
   #     user.add_update()
   #   except:
   #     logging.ERROR(u'数据库访问失败')
-  #     return jsonify(code=RET.DBERR)
+  #     return jsonify(code=MESSAGE.DBERR)
   # elif 'name' in dict:
   #   # 修改用户名
   #   name = dict.get('name')
   #   # 判断用户名是否存在
   #   if User.query.filter_by(name=name).count():
-  #     return jsonify(code=RET.DATAEXIST)
+  #     return jsonify(code=MESSAGE.DATAEXIST)
   #   else:
   #     user = User.query.get(session['user_id'])
   #     user.name = name
   #     user.add_update()
-  #     return jsonify(code=RET.OK)
+  #     return jsonify(code=MESSAGE.OK)
   # else:
-  #   return jsonify(code=RET.PARAMERR, msg=ret_map[RET.PARAMERR])
+  #   return jsonify(code=MESSAGE.PARAMERR, msg=ret_map[MESSAGE.PARAMERR])
 
 
 
@@ -141,39 +150,39 @@ def user_login():
   password = dict.get('password')
   # 验证非空
   if not all([mobile, password]):
-    return jsonify(code=RET.PARAMERR, msg=ret_map[RET.PARAMERR])
+    return jsonify(code=MESSAGE.PARAMERR, msg=ret_map[MESSAGE.PARAMERR])
   # 验证手机号是否格式正确
   if not re.match(r'^1[34578]\d{9}$', mobile):
-    return jsonify(code=RET.PARAMERR, msg=u'手机号格式错误')
+    return jsonify(code=MESSAGE.PARAMERR, msg=u'手机号格式错误')
   # 数据处理
   try:
     user = User.query.filter_by(phone=mobile).first()
   except:
     logging.ERROR('用户登录--数据库出错')
-    return jsonify(code=RET.DBERR, msg=ret_map[RET.DBERR])
+    return jsonify(code=MESSAGE.DBERR, msg=ret_map[MESSAGE.DBERR])
   # 判断手机号是否存在
   if user:
     # 判断密码是否正确
     if user.check_pwd(password):
       session['user_id'] = user.id
-      return jsonify(code=RET.OK, msg=u'ok')
+      return jsonify(code=MESSAGE.OK, msg=u'ok')
     else:
-      return jsonify(code=RET.PARAMERR, msg=u'密码不正确')
+      return jsonify(code=MESSAGE.PARAMERR, msg=u'密码不正确')
   else:
-    return jsonify(code=RET.PARAMERR, msg=u'手机号不存在')
+    return jsonify(code=MESSAGE.PARAMERR, msg=u'手机号不存在')
 
 
 @user_blueprint.route('/session', methods=['GET'])
 def user_is_login():
   if 'user_id' in session:
     user = User.query.filter_by(id=session['user_id']).first()
-    return jsonify(code=RET.OK, name=user.name)
+    return jsonify(code=MESSAGE.OK, name=user.name)
   else:
-    return jsonify(code=RET.DATAERR)
+    return jsonify(code=MESSAGE.DATAERR)
 
 
 @user_blueprint.route('/session', methods=['DELETE'])
 def user_logout():
   # del session['user_id']
   session.clear()
-  return jsonify(code=RET.OK)
+  return jsonify(code=MESSAGE.OK)

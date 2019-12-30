@@ -3,7 +3,7 @@ function logout() {
         url:'/api/v1/user/session',
         type:'DELETE',
         success:function (data) {
-            if(data.code==RET.OK) {
+            if(data.code==MESSAGE.OK) {
                 location.href = '/index.html';
             }
         }

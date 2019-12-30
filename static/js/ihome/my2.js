@@ -4,3 +4,15 @@ $(document).ready(function () {
     console.log(html);
   });
 });
+function logout() {
+    $.ajax({
+        url:'/api/v1/user/session',
+        type:'DELETE',
+        success:function (data) {
+            if(data.code==MESSAGE.OK) {
+                location.href = '/index.html';
+            }
+        }
+    });
+}
+

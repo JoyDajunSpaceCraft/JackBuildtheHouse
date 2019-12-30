@@ -109,3 +109,6 @@ body {
 .end-date {
     display: none;
 }
+.btn search-btn btn-theme{
+  background-color: plum;
+}

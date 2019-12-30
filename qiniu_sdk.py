@@ -2,7 +2,7 @@
 from qiniu import Auth,put_data
 import logging
 from flask import jsonify
-from status_code import RET
+from status_code import MESSAGE
 
 def put_qiniu(f1):
     access_key = 'HhKtntX3fbUdZ-53r3yVmsIu6OywiZ5ACBdf4jEf'
@@ -16,7 +16,7 @@ def put_qiniu(f1):
         token = q.upload_token(bucket_name)
         # 上传文件数据，ret是字典，键为hash、key，值为新文件名，info是response对象
         ret, info = put_data(token, None, f1.read())
-        return ret.get('key')
+        return MESSAGE.get('key')
     except:
         logging.ERROR(u'访问七牛云出错')
-        return jsonify(code=RET.SERVERERR)
+        return jsonify(code=MESSAGE.SERVERERR)
